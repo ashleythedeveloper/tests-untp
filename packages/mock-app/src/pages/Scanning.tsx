@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { Box, CircularProgress, Stack } from '@mui/material';
 import { VerifiableCredential } from '@vckit/core-types';
 import { Html5QrcodeResult } from 'html5-qrcode';
@@ -8,7 +8,6 @@ import { getDlrPassport, IdentityProvider, getProviderByType } from '@mock-app/s
 import { Scanner } from '../components/Scanner';
 import { IScannerRef } from '../types/scanner.types';
 import { CustomDialog } from '../components/CustomDialog';
-import { GlobalContext } from '../hooks/GlobalContext';
 import appConfig from '../constants/app-config.json';
 
 const Scanning = () => {
@@ -18,7 +17,6 @@ const Scanning = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [openDialogErrorCode, setOpenDialogErrorCode] = useState<boolean>(false);
   const navigate = useNavigate();
-  const { theme } = useContext<any>(GlobalContext);
 
   const goVerifyPage = async (identityProvider: IdentityProvider) => {
     try {
@@ -38,7 +36,7 @@ const Scanning = () => {
       redirectToVerifyPage(dlrPassport.href);
     } catch (error) {
       console.log(error);
-      toastMessage({ status: Status.error, message: 'Failed to verify code' });
+      // toastMessage({ status: Status.error, message: 'Failed to verify code' });
     } finally {
       setIsLoading(false);
     }
@@ -52,7 +50,7 @@ const Scanning = () => {
   };
 
   React.useEffect(() => {
-    if (!scannedCode || !identityProvider) {
+    if (!scannedCode || !identityProvider || isLoading) {
       return;
     }
 
@@ -66,7 +64,8 @@ const Scanning = () => {
   const onScanResult = (decodedText: string, result: Html5QrcodeResult) => {
     const formatName = result?.result?.format?.formatName;
     if (!formatName) {
-      return toastMessage({ status: Status.error, message: 'Failed to scanning code' });
+      return;
+      // return toastMessage({ status: Status.error, message: 'Failed to scanning code' });
     }
 
     const providerInstance = getProviderByType(appConfig.identifyProvider.type);
@@ -82,18 +81,6 @@ const Scanning = () => {
     setOpenDialogErrorCode(false);
   };
 
-  useEffect(() => {
-    if (typeof theme.setSelectedTheme === 'function') {
-      theme.setSelectedTheme({
-        primaryColor: 'rgb(255, 207, 7)',
-        secondaryColor: '#000000',
-        tertiaryColor: '#000000',
-      });
-    }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [theme.setSelectedTheme]);
-
   return (
     <Box
       sx={{
@@ -106,8 +93,10 @@ const Scanning = () => {
       <Scanner
         ref={scannerRef}
         fps={30}
-        qrbox={{ width: 250, height: 150 }}
+        qrbox={{ width: 500, height: 300 }}
         disableFlip={false}
+        useBarCodeDetectorIfSupported={true}
+        focusMode= 'continuous'
         qrCodeSuccessCallback={onScanResult}
         qrCodeErrorCallback={onScanError}
       />
