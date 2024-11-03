@@ -3078,7 +3078,8 @@
   ],
   "identifyProvider": {
     "type": "gs1",
-    "url": "http://localhost:3333/products"
+    "url": "http://localhost:3333/products",
+    "namespace": "gs1"
   },
   "defaultVerificationServiceLink": {
     "title": "Default Verification Service",
@@ -3086,8 +3087,12 @@
     "type": "application/json",
     "href": "http://localhost:3332/agent/routeVerificationCredential",
     "hreflang": [
+      "fr",
       "en"
     ],
-    "apiKey": "test123"
+    "apiKey": "test123",
+    "headers": {
+      "Authorization": "test123"
+    }
   }
 }
