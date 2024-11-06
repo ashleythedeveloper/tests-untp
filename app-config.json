@@ -1,5 +1,5 @@
 {
-  "name": "CHERRIES SUPPLY CHAIN TRACEABILITY 2sd2233dd1234567892211dd",
+  "name": "Battery Supply Chain Traceability",
   "styles": {
     "primaryColor": "rgb(35, 138, 186)",
     "secondaryColor": "black",
@@ -19,11 +19,11 @@
   ],
   "apps": [
     {
-      "name": "Orchard Facility",
+      "name": "Battery Facility",
       "type": "producer",
       "assets": {
         "logo": "Cherries-farm-logo.webp",
-        "brandTitle": "Orchard Facility"
+        "brandTitle": "Battery Facility"
       },
       "styles": {
         "primaryColor": "#b5651d",
@@ -898,7 +898,7 @@
                     "vckitAPIUrl": "http://localhost:3332/v2",
                     "issuer": {
                       "id": "did:web:uncefact.github.io:project-vckit:test-and-development",
-                      "name": "Orchard Facility"
+                      "name": "Battery Facility"
                     },
                     "headers": {
                       "Authorization": "Bearer test123"
