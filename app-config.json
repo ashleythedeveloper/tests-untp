@@ -1,39 +1,49 @@
 {
-  "name": "Battery Supply Chain Traceability",
+  "name": "Cotton Supply Chain Traceability",
   "styles": {
-    "primaryColor": "rgb(35, 138, 186)",
-    "secondaryColor": "black",
-    "tertiaryColor": "black"
+    "primaryColor": "#007BFF",
+    "secondaryColor": "#F8F9FA",
+    "tertiaryColor": "#343A40"
   },
   "generalFeatures": [
     {
       "name": "General features",
       "type": "",
       "styles": {
-        "primaryColor": "rgb(35, 138, 186)",
-        "secondaryColor": "black",
-        "tertiaryColor": "black"
+        "primaryColor": "#007BFF",
+        "secondaryColor": "#F8F9FA",
+        "tertiaryColor": "#343A40"
       },
-      "features": []
+      "features": [
+        {
+          "id": "DrJusab0EkRT7pywudddC",
+          "name": "New Feature",
+          "components": [],
+          "services": []
+        }
+      ],
+      "id": "9A0wbVOQbDWNyceHWiJgU",
+      "services": [],
+      "components": []
     }
   ],
   "apps": [
     {
-      "name": "Battery Facility",
+      "name": "Cotton Farm",
       "type": "producer",
       "assets": {
-        "logo": "Cherries-farm-logo.webp",
-        "brandTitle": "Battery Facility"
+        "logo": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-sehRgvPbOeC328bfvtxJQxOk/user-kZ29ZvYUGEKeKmwZSzShXtxE/img-h4CSnBkTJ18o7pbdQ8a5dpUf.png?st=2024-11-07T16%3A50%3A50Z&se=2024-11-07T18%3A50%3A50Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-11-07T17%3A28%3A37Z&ske=2024-11-08T17%3A28%3A37Z&sks=b&skv=2024-08-04&sig=1ecIRAr/ux9fBeQ/tt8K5YtOu1Yi6z7SB39Lld%2B3Ojo%3D",
+        "brandTitle": "Bob's cotton farm"
       },
       "styles": {
-        "primaryColor": "#b5651d",
-        "secondaryColor": "#391561",
+        "primaryColor": "#0077be",
+        "secondaryColor": "#e0f7fa",
         "tertiaryColor": "#ffffff"
       },
       "features": [
         {
           "name": "Issue DPP",
-          "id": "produce_product",
+          "id": "RFSO7uMy7bhbUgWu5nRzO",
           "components": [
             {
               "name": "JsonForm",
@@ -881,12 +891,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "pfO4RC3wF6wF5CzMIbhlE"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "p8XCMEj7oss1VA5LQqFRC"
             }
           ],
           "services": [
@@ -898,7 +910,7 @@
                     "vckitAPIUrl": "http://localhost:3332/v2",
                     "issuer": {
                       "id": "did:web:uncefact.github.io:project-vckit:test-and-development",
-                      "name": "Battery Facility"
+                      "name": "Cotton Farm"
                     },
                     "headers": {
                       "Authorization": "Bearer test123"
@@ -942,7 +954,8 @@
                   },
                   "identifierKeyPath": "/id"
                 }
-              ]
+              ],
+              "id": "rCh1IaVnWBfkdq9E21p17"
             },
             {
               "name": "mergeToLocalStorage",
@@ -951,13 +964,14 @@
                   "storageKey": "CherriesFarm_dpps",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
                 }
-              ]
+              ],
+              "id": "7ljfKMrtLSqP1NLhrsQli"
             }
           ]
         },
         {
           "name": "Move to Next Facility",
-          "id": "transaction_product",
+          "id": "nBuoc2q_rPyPcupNPpZx3",
           "components": [
             {
               "name": "LocalStorageLoader",
@@ -1102,7 +1116,8 @@
                     }
                   }
                 ]
-              }
+              },
+              "id": "gTCA30rVCNTbTH2d-DsSH"
             },
             {
               "name": "CustomButton",
@@ -1110,7 +1125,8 @@
               "props": {
                 "includeDownload": true,
                 "downloadFileName": "transaction"
-              }
+              },
+              "id": "JnQrLg1k-gKodsvBr3Li9"
             }
           ],
           "services": [
@@ -1120,7 +1136,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "9UV4ubp3K5fT3CpHBlTkw"
             },
             {
               "name": "processTransactionEvent",
@@ -1178,7 +1195,8 @@
                     "keyPath": "/0/epcList/index/name"
                   }
                 }
-              ]
+              ],
+              "id": "TnwaBNEV0cpjqXuU-df-P"
             },
             {
               "name": "mergeToLocalStorage",
@@ -1187,13 +1205,14 @@
                   "storageKey": "orchard_facility_transaction_event",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
-              ]
+              ],
+              "id": "Q884k58Y3BC3K5uIIB145"
             }
           ]
         },
         {
           "name": "Issue traceability Event",
-          "id": "issue_traceability_event",
+          "id": "OhgyeEeyGCxy6PJw7zX1L",
           "components": [
             {
               "name": "JsonForm",
@@ -2204,12 +2223,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "2L0M2KXVRuH2COoHTguE4"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "hOn8s8XSHyZ7XdKCFnrs-"
             }
           ],
           "services": [
@@ -2266,13 +2287,14 @@
                   "identifierKeyPath": "/0/id",
                   "eventTypePath": "/0/type/0"
                 }
-              ]
+              ],
+              "id": "dtcIH_mXIqqUNtKazwJBC"
             }
           ]
         },
         {
           "name": "Issue Object Event",
-          "id": "issue_object_event",
+          "id": "ra0WDhYXN5WhWoTqMsKwL",
           "components": [
             {
               "name": "JsonForm",
@@ -2396,12 +2418,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "-Ch7ygy5fe2O90w6ksE93"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "EGbHsk0eh7PY-9a68Ca8a"
             }
           ],
           "services": [
@@ -2411,7 +2435,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "-PpxpghRXDgYv1e-IW9K8"
             },
             {
               "name": "processObjectEvent",
@@ -2465,13 +2490,14 @@
                   },
                   "identifierKeyPath": "/0/id"
                 }
-              ]
+              ],
+              "id": "bhGA4kHW2ao0X0V30HhG0"
             }
           ]
         },
         {
           "name": "Issue Association Event",
-          "id": "issue_association_event",
+          "id": "L0eZFvu-jbO24QXD5CUOz",
           "components": [
             {
               "name": "JsonForm",
@@ -2602,12 +2628,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "BDOtNAcBCAVRfAHA7nu9K"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "YlW-LaTaLz4KS_cT3QAQl"
             }
           ],
           "services": [
@@ -2617,7 +2645,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "1xzI7OVb53v9nRx8r6Beb"
             },
             {
               "name": "processAssociationEvent",
@@ -2671,13 +2700,14 @@
                   },
                   "identifierKeyPath": "/0/id"
                 }
-              ]
+              ],
+              "id": "ELkl9n8xepOPu_aCAq13I"
             }
           ]
         },
         {
           "name": "Issue Aggregation Event",
-          "id": "issue_aggregation_event",
+          "id": "KQzKP94NWC5g2aAFfx_71",
           "components": [
             {
               "name": "JsonForm",
@@ -2808,12 +2838,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "zilZYU11MI7DfRD5DMtvx"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "PNvQ4B0M8NDq74VX4H2cm"
             }
           ],
           "services": [
@@ -2823,7 +2855,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "7nv2LSk8Nbeefnfp3-TE_"
             },
             {
               "name": "processAggregationEvent",
@@ -2877,13 +2910,14 @@
                   },
                   "identifierKeyPath": "/0/id"
                 }
-              ]
+              ],
+              "id": "U1iVCTRuHytWPKalggwcq"
             }
           ]
         },
         {
           "name": "Issue Transformation Event",
-          "id": "issue_transformation_event",
+          "id": "aZYtj-0bzTeqawdZC68LA",
           "components": [
             {
               "name": "JsonForm",
@@ -3037,12 +3071,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "FPtvCkk99kuGYV3Z9k2gA"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "IsWPy3zJxV-zEBgFyxFDv"
             }
           ],
           "services": [
@@ -3052,7 +3088,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "0qDkdvOHBtccdaIUBhg0e"
             },
             {
               "name": "processTransformationEventOnly",
@@ -3106,13 +3143,14 @@
                   },
                   "identifierKeyPath": "/0/id"
                 }
-              ]
+              ],
+              "id": "TFbO3AkBOTdAe_Bruv-KD"
             }
           ]
         },
         {
           "name": "Issue DCC",
-          "id": "produce_product",
+          "id": "3kUWN2bn-ytg3j_1r2rLT",
           "components": [
             {
               "name": "JsonForm",
@@ -3716,12 +3754,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "-3twReVBZJO515GBq3Lbm"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "SL_ceXbiMlh05mJ-vAHWf"
             }
           ],
           "services": [
@@ -3777,13 +3817,14 @@
                   },
                   "identifierKeyPath": "/id"
                 }
-              ]
+              ],
+              "id": "wJK5nSyGwzOhz4YmwzaXg"
             }
           ]
         },
         {
           "name": "Issue DFR",
-          "id": "produce_product",
+          "id": "OjZJxjg8iAE00beiWPJHC",
           "components": [
             {
               "name": "JsonForm",
@@ -4206,12 +4247,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "sg7wuCZsnITczT3neRu50"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "ksZyouEw8E013lpnzMS1_"
             }
           ],
           "services": [
@@ -4267,11 +4310,13 @@
                   },
                   "identifierKeyPath": "/id"
                 }
-              ]
+              ],
+              "id": "grytl67KR-Q70J9O96p4x"
             }
           ]
         }
-      ]
+      ],
+      "id": "jU8VPrO3U2GrUaF2yiLQh"
     },
     {
       "name": "Packhouse Facility",
@@ -4288,7 +4333,7 @@
       "features": [
         {
           "name": "Issue DPP",
-          "id": "produce_product",
+          "id": "kzoE_EMZTOQncmOyI9_j5",
           "components": [
             {
               "name": "LocalStorageLoader",
@@ -5110,12 +5155,14 @@
                     }
                   }
                 ]
-              }
+              },
+              "id": "4G3HEqE96phUR2VB1zk1S"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "PsqNW6wAU8xW3yqyt1QTZ"
             }
           ],
           "services": [
@@ -5171,7 +5218,8 @@
                   },
                   "identifierKeyPath": "/id"
                 }
-              ]
+              ],
+              "id": "Wg0n7xMqFt2JBedSvdXS7"
             },
             {
               "name": "mergeToLocalStorage",
@@ -5180,13 +5228,14 @@
                   "storageKey": "CherriesFarm_dpps",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
                 }
-              ]
+              ],
+              "id": "Xg23SLt5r3Tp2wVdaHIW4"
             }
           ]
         },
         {
           "name": "Move to Next Facility",
-          "id": "transaction_product",
+          "id": "G44_gwrFj31K2iWjiU-LD",
           "components": [
             {
               "name": "LocalStorageLoader",
@@ -5331,7 +5380,8 @@
                     }
                   }
                 ]
-              }
+              },
+              "id": "DDu-a3RPViS_Q0bkdDwgI"
             },
             {
               "name": "CustomButton",
@@ -5339,7 +5389,8 @@
               "props": {
                 "includeDownload": true,
                 "downloadFileName": "transaction"
-              }
+              },
+              "id": "Qbp09i9qw76hHPX_lmrq7"
             }
           ],
           "services": [
@@ -5349,7 +5400,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "bvAAhHx9mtXcsFKE6XHFY"
             },
             {
               "name": "processTransactionEvent",
@@ -5407,7 +5459,8 @@
                     "keyPath": "/0/epcList/index/name"
                   }
                 }
-              ]
+              ],
+              "id": "ptUDD3cmMq0OdFxAXt8tM"
             },
             {
               "name": "mergeToLocalStorage",
@@ -5416,11 +5469,13 @@
                   "storageKey": "orchard_facility_transaction_event",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
-              ]
+              ],
+              "id": "hRTO1tposo-vK39Gj-R7t"
             }
           ]
         }
-      ]
+      ],
+      "id": "luf-s_WUCUpho63jIpQl0"
     },
     {
       "name": "Fumigation and Freight Forwarding Facility",
@@ -5437,7 +5492,7 @@
       "features": [
         {
           "name": "Issue DPP",
-          "id": "produce_product",
+          "id": "5H97FMnDMmpEUDKbjn1Ul",
           "components": [
             {
               "name": "LocalStorageLoader",
@@ -6259,12 +6314,14 @@
                     }
                   }
                 ]
-              }
+              },
+              "id": "ORrusmjs3qy0yqo_ZJNtX"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "-blT3_nQGDr05rPY35lpn"
             }
           ],
           "services": [
@@ -6320,7 +6377,8 @@
                   },
                   "identifierKeyPath": "/id"
                 }
-              ]
+              ],
+              "id": "fMSwjSJBFoB-d1aNcPVPF"
             },
             {
               "name": "mergeToLocalStorage",
@@ -6329,13 +6387,14 @@
                   "storageKey": "CherriesFarm_dpps",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
                 }
-              ]
+              ],
+              "id": "ZgF_KgJSXKGb3HPDqxijP"
             }
           ]
         },
         {
           "name": "Move to Next Facility",
-          "id": "transaction_product",
+          "id": "nWdTBJV_-8mkEoeBmfXJL",
           "components": [
             {
               "name": "LocalStorageLoader",
@@ -6480,7 +6539,8 @@
                     }
                   }
                 ]
-              }
+              },
+              "id": "KRl8WkwGG9e5DQFmc6HVl"
             },
             {
               "name": "CustomButton",
@@ -6488,7 +6548,8 @@
               "props": {
                 "includeDownload": true,
                 "downloadFileName": "transaction"
-              }
+              },
+              "id": "N9YuWE0Cqbnb9VX2XdzDF"
             }
           ],
           "services": [
@@ -6498,7 +6559,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "ayHP_WriX_ueHqv65e6hn"
             },
             {
               "name": "processTransactionEvent",
@@ -6556,7 +6618,8 @@
                     "keyPath": "/0/epcList/index/name"
                   }
                 }
-              ]
+              ],
+              "id": "vfEFbVO6GvDQNuV7577JN"
             },
             {
               "name": "mergeToLocalStorage",
@@ -6565,11 +6628,13 @@
                   "storageKey": "orchard_facility_transaction_event",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
-              ]
+              ],
+              "id": "vE7l3ZKogNwO0jl2jc82n"
             }
           ]
         }
-      ]
+      ],
+      "id": "iYz2pC8YErztYRWOPcJXB"
     },
     {
       "name": "Airport Terminal Facility",
@@ -6586,7 +6651,7 @@
       "features": [
         {
           "name": "Issue DPP",
-          "id": "produce_product",
+          "id": "mUjXkd5SKx-Ju2_ag7OVi",
           "components": [
             {
               "name": "LocalStorageLoader",
@@ -7408,12 +7473,14 @@
                     }
                   }
                 ]
-              }
+              },
+              "id": "UW-DZOw1rMsklLobj6_4-"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "-YXl6C1IJYFlo5-8KXpwL"
             }
           ],
           "services": [
@@ -7469,7 +7536,8 @@
                   },
                   "identifierKeyPath": "/id"
                 }
-              ]
+              ],
+              "id": "Vhrp_v9u_v37zqYCUZU10"
             },
             {
               "name": "mergeToLocalStorage",
@@ -7478,13 +7546,14 @@
                   "storageKey": "CherriesFarm_dpps",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
                 }
-              ]
+              ],
+              "id": "9F8Q2LNuaDrh4yzBoFz9G"
             }
           ]
         },
         {
           "name": "Move to Next Facility",
-          "id": "transaction_product",
+          "id": "iHXKfgJIrTx8AJ2dtGQEB",
           "components": [
             {
               "name": "LocalStorageLoader",
@@ -7629,7 +7698,8 @@
                     }
                   }
                 ]
-              }
+              },
+              "id": "R_WRWo2CQWAB0wnaBMeKc"
             },
             {
               "name": "CustomButton",
@@ -7637,7 +7707,8 @@
               "props": {
                 "includeDownload": true,
                 "downloadFileName": "transaction"
-              }
+              },
+              "id": "fuql1hk4P9kg21dWBR_7Q"
             }
           ],
           "services": [
@@ -7647,7 +7718,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "JB1JViVHPnB0szyr5lCBU"
             },
             {
               "name": "processTransactionEvent",
@@ -7705,7 +7777,8 @@
                     "keyPath": "/0/epcList/index/name"
                   }
                 }
-              ]
+              ],
+              "id": "4REXvjfjeYdONJ9nVSkpz"
             },
             {
               "name": "mergeToLocalStorage",
@@ -7714,11 +7787,13 @@
                   "storageKey": "orchard_facility_transaction_event",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
-              ]
+              ],
+              "id": "b_XQp1TpC3uvaE9BOyvb5"
             }
           ]
         }
-      ]
+      ],
+      "id": "GubxDa7BQOVAZmiRodTH6"
     }
   ],
   "identifyProvider": {
