@@ -1,39 +1,116 @@
 {
-  "name": "Battery Supply Chain Traceability",
+  "name": "Cotton Supply Chain Traceability",
   "styles": {
-    "primaryColor": "rgb(35, 138, 186)",
-    "secondaryColor": "black",
-    "tertiaryColor": "black"
+    "primaryColor": "#008CBA",
+    "secondaryColor": "#E0F7FA",
+    "tertiaryColor": "#FFFFFF"
   },
   "generalFeatures": [
     {
       "name": "General features",
       "type": "",
       "styles": {
-        "primaryColor": "rgb(35, 138, 186)",
-        "secondaryColor": "black",
-        "tertiaryColor": "black"
+        "primaryColor": "#007bff",
+        "secondaryColor": "#f8f9fa",
+        "tertiaryColor": "#212529"
       },
-      "features": []
+      "features": [
+        {
+          "id": "LvogK42_fNoIip81UoAcU",
+          "name": "New Featureddd",
+          "components": [
+            {
+              "name": "JsonForm",
+              "type": "EntryData",
+              "props": {
+                "schema": {},
+                "constructData": {},
+                "data": {},
+                "style": {},
+                "className": ""
+              }
+            }
+          ],
+          "services": [
+            {
+              "name": "processDPP",
+              "parameters": [
+                {
+                  "vckit": {
+                    "vckitAPIUrl": "http://localhost:3332/v2",
+                    "issuer": {
+                      "id": "did:web:uncefact.github.io:project-vckit:test-and-development",
+                      "name": "ACME Corp"
+                    },
+                    "headers": {
+                      "Authorization": "Bearer test123"
+                    }
+                  },
+                  "dpp": {
+                    "context": [
+                      "https://vocabulary.uncefact.org/untp/dpp/0.5.0/"
+                    ],
+                    "renderTemplate": [
+                      {
+                        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <link\n    href=\"https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap\"\n    rel=\"stylesheet\">\n  <title>Digital Product Passport</title>\n  <style>\n    :root {\n      --image-src: url('{{credentialSubject.productImage.linkURL}}');\n      --highlight: rgba(0, 99, 83, 1);\n      --primary-colorsblue-400: rgba(79, 149, 221, 1);\n      --primary-colorsblue-50: rgba(210, 229, 249, 1);\n      --primary-colorsblue-10: rgba(247, 250, 253, 1);\n      --white: rgba(255, 255, 255, 1);\n      --black: rgba(0, 0, 0, 1);\n      --primary-colorsgray-400: rgba(212, 214, 216, 1);\n      --primary-colorsgray-600: rgba(85, 96, 110, 1);\n      --primary-colorsblue-700: rgba(31, 90, 149, 1);\n      --primary-colorsgray-700: rgba(35, 46, 61, 1);\n      --accent-colorslight-green: rgba(184, 236, 182, 1);\n      --text-color-green: rgba(8, 50, 0, 1);\n      --accent-colorslight-red: rgba(255, 188, 183, 1);\n      --text-color-red: rgba(50, 0, 0, 1);\n    }\n\n    * {\n      margin: 0;\n      padding: 0;\n      box-sizing: border-box;\n    }\n\n    body {\n      font-family: 'Lato', sans-serif;\n    }\n\n    section {\n      padding: 0 16px 0 16px;\n    }\n\n    .section-title {\n      font-size: 18px;\n      font-weight: 700;\n      line-height: 19.62px;\n      color: #000000;\n    }\n\n    .section-description {\n      margin-top: 12px;\n      font-size: 16px;\n      line-height: 18.88px;\n      color: #000000;\n      font-weight: 400;\n    }\n\n    .table {\n      display: flex;\n      flex-direction: column;\n      justify-content: center;\n      gap: 10px;\n    }\n\n    .table-item {\n      display: grid;\n      grid-template-columns: 1fr 2fr;\n      column-gap: 16px;\n      align-items: center;\n      padding-bottom: 10px;\n\n      border-bottom: 1px solid #d4d6d8;\n    }\n\n    .table-item span {\n      font-size: 16px;\n      font-weight: 400;\n      line-height: 22px;\n      color: var(--primary-colorsgray-600);\n    }\n\n    .table-item p,\n    .table-item a,\n    .table-item a:link {\n      font-size: 16px;\n      font-weight: 500;\n      line-height: 22px;\n      color: var(--primary-colorsgray-700);\n    }\n\n    .table-line {\n      border-bottom: 1px solid #d4d6d8;\n    }\n\n    .item-title {\n      display: flex;\n\n      font-size: 16px;\n      font-weight: 400;\n      line-height: 17.44px;\n      color: #55606E;\n    }\n\n    .item-value {\n      display: flex;\n      flex-direction: column;\n\n      font-size: 16px;\n      font-weight: 500;\n      line-height: 17.44px;\n      color: #232E3D;\n    }\n\n    .item-value a,\n    .item-value span {\n      color: #232E3D;\n    }\n\n    .annotation {\n      display: flex;\n      gap: 4px;\n\n      font-size: 14px;\n      font-weight: 400;\n      line-height: 15.26px;\n      color: #55606E;\n    }\n\n    .annotation span {\n      padding-top: 2px;\n    }\n\n    .mobile {\n      min-width: 150px;\n      width: 100%;\n      margin: 0 auto;\n      display: flex;\n      flex-direction: column;\n      gap: 32px;\n      word-break: break-word;\n    }\n\n    .header {\n      min-height: 320px;\n    }\n\n    .header-image {\n      background: linear-gradient(248.36deg, rgba(0, 0, 0, 0.18) 7.6%, rgba(0, 0, 0, 0.6) 70.52%);\n      background-image: var(--image-src);\n      background-size: cover;\n      background-position: center;\n      height: 232px;\n      position: relative;\n    }\n\n    .header-image-top-left {\n      position: absolute;\n      top: 25px;\n      left: 15px;\n\n      font-weight: 500;\n      font-size: 16px;\n      line-height: 22px;\n      color: #ffffff;\n    }\n\n    .header-image-bottom-left {\n      position: absolute;\n      bottom: 18px;\n      left: 15px;\n      color: #ffffff;\n    }\n\n    .header-image-bottom-left h1 {\n      font-size: 30px;\n      font-weight: 900;\n      line-height: 32.5px;\n    }\n\n    .header-batch {\n      padding: 12px 16px 16px 16px;\n      background-color: #F7FAFD;\n\n      display: grid;\n      grid-template-columns: 1.2fr 1fr;\n      grid-auto-flow: row;\n      row-gap: 12px;\n    }\n\n    .header-batch-item {\n      display: flex;\n      align-items: center;\n      gap: 6px;\n    }\n\n    .header-batch-item a {\n      color: #232E3D;\n      font-size: 14px;\n      line-height: 15.25px;\n      font-weight: 500;\n    }\n\n    .header-batch a {\n      padding: 0 2px;\n      font-size: 14px;\n      font-weight: 400;\n      line-height: 19.25px;\n      text-decoration: none;\n      color: #000000;\n    }\n\n    .information {\n      display: flex;\n      flex-direction: column;\n      gap: 8px;\n    }\n\n    .information-text {\n      font-size: 19px;\n      font-weight: 300;\n      line-height: 22.42px;\n    }\n\n    .information-show-more {\n      display: flex;\n      flex-direction: column;\n      gap: 10px;\n\n      font-size: 14px;\n      font-weight: 500;\n      line-height: 22px;\n    }\n\n    .information-show-more a {\n      color: var(--primary-colorsgray-700);\n    }\n\n    .passport {\n      display: flex;\n      flex-direction: column;\n      gap: 24px;\n    }\n\n    .passport-header {\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n    }\n\n    .passport-box {\n      display: grid;\n      grid-template-columns: 1fr 1fr;\n\n      border: #D4D6D8 1px dotted;\n      border-radius: 5px;\n      overflow: hidden;\n    }\n\n    .passport-box-item {\n      display: flex;\n      flex-direction: column;\n      justify-content: center;\n      align-items: center;\n\n      padding: 12px 16px 12px 16px;\n\n      border: #D4D6D8 1px dotted;\n      outline-offset: -1px;\n      min-height: 94px;\n      color: #1F5A95;\n    }\n\n    .passport-box-item h3 {\n      font-size: 40px;\n      font-weight: 900;\n      line-height: 43.33px;\n      letter-spacing: 2px;\n    }\n\n    .passport-box-item p {\n      margin-top: 8px;\n      font-size: 15px;\n      font-weight: 600;\n      line-height: 18.88px;\n    }\n\n    .passport-box-item:last-child {\n      background-color: #F7FAFD;\n    }\n\n    .passport-issued-by-header {\n      display: flex;\n      flex-direction: column;\n      gap: 12px;\n    }\n\n    .passport-issued-by-header h3 {\n      margin-top: 2px;\n      font-size: 20px;\n      font-weight: 700;\n      line-height: 21.8px;\n    }\n\n    .passport-issued-by-header p {\n      font-size: 16px;\n      font-weight: 400;\n      line-height: 19.25px;\n      color: #55606E;\n    }\n\n    .passport-annotation {\n      font-size: 14px;\n      font-weight: 400;\n      line-height: 15.26px;\n      color: #55606E;\n    }\n\n    .traceability-cards {\n      display: flex;\n      flex-direction: column;\n      gap: 12px;\n    }\n\n    .traceability-card {\n      display: grid;\n      grid-template-columns: 3fr 1fr;\n      justify-content: space-between;\n      align-items: center;\n\n      min-height: 40px;\n      text-decoration: none;\n    }\n\n    .traceability-card-text {\n      display: flex;\n      align-items: center;\n      gap: 8px;\n\n      font-size: 16px;\n      font-weight: 400;\n      line-height: 17.44px;\n      color: #000000;\n    }\n\n    .traceability-card-view-details,\n    .traceability-card-view-details:link {\n      display: flex;\n      justify-content: flex-end;\n      align-items: center;\n      gap: 8px;\n    }\n\n    .emission-score-card {\n      display: flex;\n      flex-direction: column;\n      gap: 12px;\n    }\n\n    .mission-score-title {\n      font-size: 20px;\n      font-weight: 700;\n      line-height: 21.8px;\n    }\n\n    .mission-score-description {\n      font-size: 16px;\n      font-weight: 400;\n      line-height: 18.88px;\n      color: #000000;\n    }\n\n    .score {\n      display: flex;\n      flex-direction: column;\n      gap: 6px;\n    }\n\n    .score-unit {\n      font-size: 40px;\n      font-weight: 900;\n      line-height: 43.33px;\n      color: #1F5A95;\n      letter-spacing: 2px;\n    }\n\n    .score-name {\n      font-size: 16px;\n      font-weight: 400;\n      line-height: 17.44px;\n      color: #55606E;\n    }\n\n    .declarations {\n      display: flex;\n      flex-direction: column;\n      gap: 12px;\n    }\n\n    .declaration-title {\n      font-size: 20px;\n      font-weight: 700;\n      line-height: 21.8px;\n    }\n\n    .cards-conformities {\n      display: flex;\n      flex-direction: column;\n      gap: 8px;\n    }\n\n    .cards-conformity {\n      display: flex;\n      flex-direction: column;\n      align-items: flex-start;\n      gap: 8px;\n\n      min-width: 336px;\n      padding: 16px 18px 16px 16px;\n      position: relative;\n      background-color: var(--white);\n      border-radius: 4px;\n      border: 1px solid;\n      border-color: var(--primary-colorsgray-400);\n    }\n\n    .frame {\n      display: flex;\n      align-items: center;\n      justify-content: space-between;\n      position: relative;\n      align-self: stretch;\n      width: 100%;\n      flex: 0 0 auto;\n    }\n\n    .div {\n      display: inline-flex;\n      align-items: center;\n      gap: 4px;\n      position: relative;\n      flex: 0 0 auto;\n    }\n\n    .company-name {\n      position: relative;\n      width: fit-content;\n      font-weight: 400;\n      color: var(--primary-colorsgray-600);\n      font-size: 14px;\n      line-height: 19.2px;\n    }\n\n    .tags-VC-badge-red {\n      display: inline-flex;\n      align-items: center;\n      justify-content: center;\n      gap: 10px;\n      padding: 4px 8px;\n      flex: 0 0 auto;\n      background-color: var(--accent-colorslight-red);\n      color: var(--text-color-red);\n      border-radius: 8px;\n      overflow: hidden;\n    }\n\n    .tags-VC-badge-green {\n      display: inline-flex;\n      align-items: center;\n      justify-content: center;\n      gap: 10px;\n      padding: 4px 8px;\n      flex: 0 0 auto;\n      background-color: var(--accent-colorslight-green);\n      color: var(--text-color-green);\n      border-radius: 8px;\n      overflow: hidden;\n    }\n\n    .verifiable {\n      width: fit-content;\n      font-weight: 600;\n      font-size: 14px;\n      line-height: 15.3px;\n    }\n\n    .mobile .frame-2 {\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      gap: 4px;\n      position: relative;\n      align-self: stretch;\n      width: 100%;\n      flex: 0 0 auto;\n    }\n\n    .text-wrapper {\n      position: relative;\n      align-self: stretch;\n      margin-top: -1px;\n      font-weight: 400;\n      color: var(--primary-colorsblue-700);\n      font-size: 18px;\n      line-height: 21.2px;\n    }\n\n    .p {\n      color: var(--primary-colorsgray-600);\n      font-size: 14px;\n      line-height: 19.2px;\n      align-self: stretch;\n      font-weight: 400;\n      color: #55606e;\n    }\n\n    .span {\n      font-weight: 400;\n      font-size: 14px;\n      line-height: 19.2px;\n    }\n\n    .text-wrapper-2 {\n      color: #55606e;\n    }\n\n    .frame-3 {\n      display: inline-flex;\n      flex-direction: column;\n      align-items: flex-start;\n      position: relative;\n      flex: 0 0 auto;\n      margin-right: -2px;\n      border-bottom-width: 1px;\n      border-bottom-style: solid;\n      border-color: var(--white);\n    }\n\n    .frame-4 {\n      display: inline-flex;\n      flex-direction: column;\n      align-items: flex-start;\n      gap: 4px;\n      padding: 4px 0px;\n      position: relative;\n      flex: 0 0 auto;\n      border-top-width: 1px;\n      border-top-style: solid;\n      border-color: var(--white);\n    }\n\n    .typography-heading {\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      gap: 10px;\n    }\n\n    .heading {\n      position: relative;\n      flex: 1;\n      font-weight: 400;\n      color: var(--primary-colorsgray-700);\n      font-size: 16px;\n      line-height: 17.4px;\n    }\n\n    .heading-2 {\n      position: relative;\n      flex: 1;\n      margin-top: -0.5px;\n      font-weight: 400;\n      color: var(--primary-colorsgray-600);\n      font-size: 14px;\n      line-height: 19.2px;\n    }\n\n    .cards-traceability {\n      display: flex;\n      align-items: center;\n      justify-content: space-between;\n      padding: 8px 0px;\n      position: relative;\n      align-self: stretch;\n      width: 100%;\n      flex: 0 0 auto;\n      border-radius: 4px;\n      text-decoration: none;\n    }\n\n    .history-information {\n      display: flex;\n      flex-direction: column;\n      gap: 12px;\n    }\n\n    .history-value-chain-item {\n      display: flex;\n      flex-direction: column;\n      gap: 8px;\n    }\n\n    .history-value-chain {\n      display: flex;\n      flex-direction: column;\n      gap: 4px;\n    }\n\n    .history-value-chain p {\n      font-size: 18px;\n      font-weight: 400;\n      line-height: 21.24px;\n      color: #1F5A95;\n    }\n\n    .verified-ratio {\n      background-color: #D2E5F9;\n      width: fit-content;\n      padding: 2px 4px;\n    }\n\n    .verified-ratio p {\n      font-size: 14px;\n      font-weight: 400;\n      line-height: 19.25px;\n      color: var(--black);\n    }\n\n    .frame-5 {\n      display: inline-flex;\n      align-items: center;\n      gap: 8px;\n      position: relative;\n      flex: 0 0 auto;\n    }\n\n    .company-name-wrapper {\n      display: flex;\n      flex-direction: column;\n      width: 260px;\n      align-items: flex-start;\n      gap: 4px;\n      position: relative;\n    }\n\n    .company-name-2 {\n      color: var(--black);\n      font-size: 16px;\n      line-height: 17.4px;\n      position: relative;\n      align-self: stretch;\n      font-weight: 400;\n    }\n\n    .img {\n      position: relative;\n      flex: 0 0 auto;\n      margin-right: -1px;\n    }\n\n    .production {\n      display: none;\n      flex-direction: column;\n      gap: 12px;\n    }\n\n    .production:has(.table-item) {\n      display: flex;\n    }\n\n    .production-title {\n      font-size: 20px;\n      font-weight: 700;\n      line-height: 21.8px;\n    }\n\n    .product-table,\n    .product-table:link,\n    .product-table:visited,\n    .product-table:active {\n      color: #232E3D;\n    }\n\n    .composition-box {\n      display: flex;\n      flex-direction: column;\n      gap: 8px;\n      margin-top: 12px;\n    }\n\n    .composition-box-item {\n      display: grid;\n      grid-template-columns: 1fr auto;\n      justify-content: space-between;\n\n      border: 1px solid #d4d6d8;\n      border-radius: 4px;\n      padding: 16px;\n    }\n\n    .composition-percent {\n      font-size: 16px;\n      font-weight: 500;\n      line-height: 21.92px;\n      color: #000000;\n    }\n\n    .composition-title {\n      font-size: 16px;\n      font-weight: 600;\n      line-height: 17.44px;\n      color: #000000;\n    }\n\n    .composition-tag {\n      display: flex;\n    }\n\n    .composition-tag-item {\n      font-size: 14px;\n      font-weight: 400;\n      line-height: 19.25px;\n      color: #000000;\n      background-color: #D2E5F9;\n      padding: 2px 4px 2px 4px;\n      margin-right: 4px;\n    }\n\n    .composition-box-first-column {\n      display: grid;\n      grid-template-columns: 40px 1fr;\n      gap: 12px;\n    }\n\n    .composition-box-second-column {\n      display: flex;\n      flex-direction: column;\n      gap: 6px;\n    }\n\n    .composition-box-second-column a {\n      color: #232E3D;\n      line-height: 22px;\n    }\n\n    .composition-box-third-column {\n      display: flex;\n      justify-content: end;\n      gap: 12px;\n    }\n\n    .composition-box-third-column svg {\n      margin: 1px 10px 0 0;\n    }\n\n    .passport-issued-by {\n      display: flex;\n      flex-direction: column;\n      gap: 12px;\n    }\n\n    .history {\n      display: flex;\n      flex-direction: column;\n      gap: 12px;\n    }\n\n    .history-event {\n      display: flex;\n      flex-direction: column;\n    }\n\n    .history-item {\n      border-bottom: 1px solid #d4d6d8;\n      padding: 10px 0 12px 0;\n\n      display: grid;\n      grid-template-columns: 1fr auto;\n      gap: 16px;\n      justify-content: space-between;\n    }\n\n    .history-item span {\n      font-size: 16px;\n      font-weight: 400;\n      line-height: 17.44px;\n      color: #000000;\n    }\n\n    .history-item a {\n      font-size: 16px;\n      font-weight: 500;\n      line-height: 17.44px;\n      color: var(--primary-colorsgray-700);\n      text-decoration-color: #4f95dd;\n      text-decoration-thickness: 2px;\n    }\n\n    .country-code {\n      font-size: 14px;\n      font-weight: 400;\n      line-height: 19.25px;\n      color: #55606e;\n    }\n\n    .blue-bottom-line-thin,\n    .blue-bottom-line-thin:link {\n      border-bottom: 1px #4F95DD solid;\n      width: fit-content;\n      justify-content: flex-start;\n      align-items: flex-start;\n      gap: 10px;\n      display: inline-flex;\n      cursor: pointer;\n      text-decoration: none;\n    }\n\n    .blue-bottom-line-thick,\n    .blue-bottom-line-thick:link {\n      width: fit-content;\n      justify-content: flex-start;\n      align-items: flex-start;\n      gap: 10px;\n      display: inline-flex;\n\n      text-decoration-line: underline;\n      text-decoration-thickness: 2px;\n      text-decoration-color: #4F95DD;\n      text-underline-offset: 3px;\n    }\n\n    .gray-bottom-line {\n      border-bottom: 1px #55606E solid;\n      width: fit-content;\n      text-decoration: none;\n    }\n\n    .view-more-button {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      color: var(--primary-colorsblue-700);\n      cursor: pointer;\n    }\n\n    footer {\n      padding: 16px 16px 32px 16px;\n      min-height: 60px;\n      background-color: #F7FAFD;\n    }\n\n    footer p,\n    footer a,\n    footer a:link {\n      font-size: 14px;\n      font-weight: 400;\n      line-height: 19.25px;\n      color: #232E3D;\n    }\n\n    /* Media Queries for Mobiles */\n    @media (min-width: 50px) {\n      .container {\n        min-width: 375px;\n      }\n\n      .contents {\n        display: none;\n      }\n    }\n\n    /* Media Queries for Desktops */\n    @media (min-width: 1440px) {\n      .container {\n        min-width: 1040px;\n        min-height: 3000px;\n        display: flex;\n        align-items: flex-start;\n        gap: 10px;\n        background-color: #ffffff;\n        width: 100%;\n      }\n\n      .mobile {\n        display: none;\n      }\n\n      html,\n      body {\n        margin: 0px;\n        height: 100%;\n      }\n\n      /* a blue color as a generic focus style */\n      button:focus-visible {\n        outline: 2px solid #4a90e2 !important;\n        outline: -webkit-focus-ring-color auto 5px !important;\n      }\n\n      a {\n        text-decoration: none;\n      }\n\n      .container {\n        display: flex;\n        align-items: flex-start;\n        gap: 10px;\n        background-color: #ffffff;\n        width: 100%;\n        min-width: 1440px;\n        min-height: 3000px;\n      }\n\n      .container .contents {\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        gap: 40px;\n        flex: 1;\n        flex-grow: 1;\n      }\n\n      .container .frame {\n        display: flex;\n        flex-direction: column;\n        align-items: flex-start;\n        gap: 16px;\n        padding: 56px 200px 0px;\n        align-self: stretch;\n        width: 100%;\n      }\n\n      .container .cards-conformity-header {\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        position: relative;\n        align-self: stretch;\n        width: 100%;\n        flex: 0 0 auto;\n      }\n\n      .container .conformance {\n        font-size: 14px;\n        font-weight: 400;\n        line-height: 19.25px;\n        color: var(--primary-colorsgray-600);\n      }\n\n      .container .cards-conformity-conformance {\n        display: inline-flex;\n        align-items: center;\n        gap: 4px;\n        flex: 0 0 auto;\n      }\n\n      .container .cards-conformity-body {\n        display: flex;\n        flex-direction: column;\n        gap: 4px;\n      }\n\n      .container .cards-conformity-title {\n        font-size: 20px;\n        font-weight: 400;\n        line-height: 23.6px;\n        color: var(--primary-colorsblue-700);\n      }\n\n      .container .cards-conformity-description {\n        color: var(--primary-colorsgray-600);\n        font-size: 14px;\n        line-height: 19.2px;\n        align-self: stretch;\n        font-weight: 400;\n      }\n\n      .container .cards-conformity-description a {\n        color: var(--primary-colorsgray-600);\n      }\n\n      .container .declared-values {\n        display: flex;\n        flex-direction: column;\n        gap: 12px;\n      }\n\n      .container .declared-value {\n        display: flex;\n        flex-direction: column;\n        gap: 4px;\n      }\n\n      .container .declared-value h3 {\n        font-size: 16px;\n        font-weight: 400;\n        line-height: 17.44px;\n      }\n\n      .container .declared-value p {\n        font-size: 14px;\n        font-weight: 400;\n        line-height: 19.25px;\n      }\n\n      .container .PP-title {\n        width: 300px;\n        margin-top: -1px;\n        font-weight: 500;\n        color: var(--primary-colorsgray-600);\n        font-size: 24px;\n        line-height: 33px;\n      }\n\n      .container .text-wrapper {\n        align-self: stretch;\n        font-weight: 900;\n        color: var(--black);\n        font-size: 72px;\n        letter-spacing: 4.32px;\n        line-height: 78px;\n      }\n\n      .container .product-ID-ALT {\n        display: flex;\n        flex-wrap: wrap;\n        align-items: flex-start;\n        gap: 12px 12px;\n        padding: 12px 12px 16px;\n        align-self: stretch;\n        width: 100%;\n        background-color: var(--primary-colorsblue-10);\n      }\n\n      .container .div {\n        display: inline-flex;\n        align-items: center;\n        gap: 6px;\n      }\n\n      .container .line {\n        gap: 10px;\n        display: inline-flex;\n        align-items: flex-start;\n\n        text-decoration: underline;\n        text-decoration-thickness: 2px;\n        text-decoration-color: var(--primary-colorsblue-400);\n        text-underline-offset: 3px;\n      }\n\n      .container .text-wrapper-2 {\n        width: fit-content;\n        font-weight: 500;\n        color: var(--primary-colorsgray-700);\n        font-size: 16px;\n        line-height: 22px;\n      }\n\n      .container .div-wrapper {\n        display: inline-flex;\n        align-items: flex-start;\n        gap: 10px;\n        padding: 0px 0px 3px;\n      }\n\n      .container .text-wrapper-3 {\n        width: fit-content;\n        margin-top: -2px;\n        font-weight: 500;\n        color: var(--primary-colorsgray-700);\n        font-size: 16px;\n        line-height: 17.4px;\n      }\n\n      .container .frame-2 {\n        display: flex;\n        align-items: flex-start;\n        gap: 16px;\n        align-self: stretch;\n        width: 100%;\n      }\n\n      .container .PP-header {\n        min-width: 320px;\n        min-height: 200px;\n        background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.6) 79.5%);\n        background-image: var(--image-src);\n        background-size: cover;\n        background-position: 50% 50%;\n      }\n\n      .container .frame-3 {\n        display: flex;\n        flex-direction: column;\n        align-items: flex-start;\n        justify-content: flex-end;\n        gap: 8px;\n        align-self: stretch;\n        width: 100%;\n      }\n\n      .container .frame-4 {\n        display: flex;\n        flex-direction: column;\n        align-items: flex-start;\n        gap: 8px;\n        flex: 1;\n        flex-grow: 1;\n      }\n\n      .container .p {\n        align-self: stretch;\n        margin-top: -1px;\n        font-weight: 300;\n        color: var(--black);\n        font-size: 19px;\n        line-height: 22.4px;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        display: -webkit-box;\n        -webkit-line-clamp: 4;\n        -webkit-box-orient: vertical;\n      }\n\n      .container .div-2 {\n        display: flex;\n        flex-direction: column;\n        align-items: flex-start;\n        gap: 16px;\n        padding: 0px 200px;\n        align-self: stretch;\n        width: 100%;\n      }\n\n      .container .typography-heading {\n        display: inline-flex;\n        align-items: center;\n        justify-content: center;\n        gap: 10px;\n      }\n\n      .container .text-wrapper-4 {\n        width: fit-content;\n        font-weight: 700;\n        color: var(--primary-colorsgray-700);\n        font-size: 40px;\n        line-height: 43.6px;\n      }\n\n      .container .text-wrapper-5 {\n        align-self: stretch;\n        font-weight: 400;\n        color: var(--black);\n        font-size: 16px;\n        line-height: 18.9px;\n      }\n\n      .container .div-3 {\n        display: grid;\n        grid-template-columns: 1fr 1.3fr;\n        gap: 32px;\n        width: 100%;\n      }\n\n      .container .div-7 {\n        display: grid;\n        grid-template-columns: 1fr 3fr;\n        gap: 32px;\n        justify-items: center;\n      }\n\n      .container .frame-5 {\n        display: inline-flex;\n        flex-direction: column;\n        align-items: flex-start;\n        gap: 12px;\n      }\n\n      .container .frame-6 {\n        display: flex;\n        flex-wrap: wrap;\n        width: 510px;\n        align-items: flex-start;\n        gap: 0px 0px;\n        margin-top: -1px;\n        margin-left: -1px;\n        margin-right: -1px;\n        border-radius: 5px;\n        border: 1px solid;\n        border-color: var(--primary-colorsgray-400);\n      }\n\n      .container .frame-7 {\n        display: flex;\n        flex-direction: column;\n        min-width: 170px;\n        align-items: center;\n        gap: 8px;\n        padding: 12px 16px;\n        flex: 1;\n        flex-grow: 1;\n      }\n\n      .container .text-wrapper-6 {\n        align-self: stretch;\n        margin-top: -1px;\n        font-weight: 900;\n        color: var(--primary-colorsblue-700);\n        font-size: 56px;\n        text-align: center;\n        letter-spacing: 3.36px;\n        line-height: 60.7px;\n      }\n\n      .container .text-wrapper-7 {\n        width: fit-content;\n        font-weight: 700;\n        color: var(--primary-colorsblue-700);\n        font-size: 16px;\n        line-height: 18.9px;\n      }\n\n      .container .frame-8 {\n        display: flex;\n        flex-direction: column;\n        min-width: 170px;\n        align-items: center;\n        gap: 8px;\n        padding: 12px 16px;\n        flex: 1;\n        flex-grow: 1;\n        background-color: var(--primary-colorsblue-10);\n      }\n\n      .container .text-wrapper-8 {\n        align-self: stretch;\n        font-weight: 400;\n        color: var(--primary-colorsgray-600);\n        font-size: 14px;\n        line-height: 15.3px;\n      }\n\n      .container .frame-9 {\n        display: flex;\n        flex-direction: column;\n        align-items: flex-start;\n        gap: 12px;\n        flex: 1;\n        flex-grow: 1;\n      }\n\n      .container .div-4 {\n        display: inline-flex;\n        align-items: center;\n        gap: 12px;\n      }\n\n      .container .frame-10 {\n        display: flex;\n        flex-direction: column;\n        width: 260px;\n        align-items: flex-start;\n        gap: 4px;\n      }\n\n      .container .text-wrapper-9 {\n        align-self: stretch;\n        font-weight: 600;\n        color: var(--black);\n        font-size: 16px;\n        line-height: 17.4px;\n      }\n\n      .container .frame-11 {\n        display: inline-flex;\n        flex-direction: column;\n        align-items: flex-start;\n      }\n\n      .container .text-wrapper-10 {\n        width: fit-content;\n        margin-top: -1px;\n        font-weight: 900;\n        color: var(--primary-colorsblue-700);\n        font-size: 56px;\n        letter-spacing: 3.36px;\n        line-height: 60.7px;\n      }\n\n      .container .co-eq {\n        width: 130px;\n        font-weight: 400;\n        color: var(--primary-colorsgray-600);\n        font-size: 16px;\n        line-height: 17.4px;\n      }\n\n      .container .span {\n        font-weight: 400;\n        color: #55606e;\n        font-size: 16px;\n        line-height: 17.4px;\n      }\n\n      .container .text-wrapper-11 {\n        font-size: 20px;\n        line-height: 21.8px;\n      }\n\n      .container .div-5 {\n        display: flex;\n        flex-direction: column;\n        align-items: flex-start;\n        align-self: stretch;\n        width: 100%;\n      }\n\n      .container .data-two-columns {\n        display: grid;\n        grid-template-columns: 1fr 8fr;\n        align-items: flex-start;\n        gap: 16px;\n        padding: 10px 0px 12px;\n        align-self: stretch;\n        width: 100%;\n        border-bottom-width: 1px;\n        border-bottom-style: solid;\n        border-color: var(--primary-colorsgray-400);\n      }\n\n      .container .data-two-columns-2 {\n        display: flex;\n        align-items: flex-start;\n        gap: 16px;\n        padding: 10px 0px 12px;\n        align-self: stretch;\n        width: 100%;\n        border-bottom-width: 1px;\n        border-bottom-style: solid;\n        border-color: var(--primary-colorsgray-400);\n      }\n\n      .container .data-two-columns-3 {\n        display: grid;\n        grid-template-columns: 1.1fr 2fr;\n        gap: 16px;\n        padding: 10px 0px 12px;\n        width: 100%;\n        border-bottom-width: 1px;\n        border-bottom-style: solid;\n        border-color: var(--primary-colorsgray-400);\n      }\n\n      .container .data-two-columns .list {\n        display: flex;\n        flex-direction: column;\n      }\n\n      .container .text-wrapper-12 {\n        font-weight: 400;\n        color: var(--primary-colorsgray-600);\n        font-size: 16px;\n        line-height: 22px;\n      }\n\n      .container .data-data {\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        gap: 10px;\n        align-self: stretch;\n        flex-grow: 1;\n        flex: 1;\n      }\n\n      .container .data {\n        flex: 1;\n        font-weight: 500;\n        color: var(--primary-colorsgray-700);\n        font-size: 16px;\n      }\n\n      .container .data-2 {\n        font-weight: 500;\n        color: var(--primary-colorsgray-700);\n        font-size: 16px;\n        line-height: 17.4px;\n        flex: 1;\n      }\n\n      .container .frame-12 {\n        display: flex;\n        flex-direction: column;\n        align-items: flex-start;\n        flex: 1;\n        flex-grow: 1;\n      }\n\n      .container .line-wrapper {\n        flex-wrap: wrap;\n        gap: 10px 10px;\n        display: inline-flex;\n        align-items: flex-start;\n        padding: 0px 0px 3px;\n        border-bottom-width: 2px;\n        border-bottom-style: solid;\n        border-color: var(--primary-colorsblue-400);\n      }\n\n      .container .frame-13 {\n        display: flex;\n        align-items: flex-start;\n        gap: 4px;\n        align-self: stretch;\n        width: 100%;\n      }\n\n      .container .text-wrapper-13 {\n        width: fit-content;\n        font-weight: 400;\n        color: var(--primary-colorsgray-600);\n        font-size: 14px;\n        line-height: 15.3px;\n        margin-top: -1px;\n      }\n\n      .container .text-wrapper-14 {\n        width: 358px;\n        margin-top: -1px;\n        font-weight: 700;\n        color: var(--primary-colorsgray-700);\n        font-size: 40px;\n        line-height: 43.6px;\n      }\n\n      .container .frame-14 {\n        display: flex;\n        flex-direction: column;\n        align-items: flex-start;\n        gap: 12px;\n        padding: 0px 32px 32px;\n        align-self: stretch;\n        width: 100%;\n        background-color: var(--primary-colorsblue-10);\n        border-radius: 4px;\n        overflow: hidden;\n      }\n\n      .container .frame-15 {\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        justify-content: center;\n        gap: 12px;\n        padding: 16px 0px 0px;\n        align-self: stretch;\n        width: 100%;\n      }\n\n      .container .environment {\n        align-self: stretch;\n        margin-top: -1px;\n        font-weight: 400;\n        color: var(--primary-colorsgray-600);\n        font-size: 14px;\n        line-height: 19.2px;\n        text-transform: uppercase;\n      }\n\n      .container .text-wrapper-15 {\n        align-self: stretch;\n        font-weight: 400;\n        color: var(--primary-colorsblue-700);\n        font-size: 18px;\n        line-height: 21.2px;\n      }\n\n      .container .frame-16 {\n        display: grid;\n        grid-template-columns: 1fr 1fr 1fr;\n        row-gap: 24px;\n        column-gap: 32px;\n        align-self: stretch;\n      }\n\n      .container .frame-17 {\n        display: flex;\n        flex-direction: column;\n        min-width: 400px;\n        align-items: flex-start;\n        gap: 4px;\n        flex: 1;\n        flex-grow: 1;\n      }\n\n      .container .data-wrapper {\n        align-items: center;\n        justify-content: center;\n        gap: 10px;\n        display: flex;\n        flex: 1;\n        flex-grow: 1;\n      }\n\n      .container .text-wrapper-16 {\n        font-weight: 500;\n        color: var(--primary-colorsgray-700);\n        font-size: 14px;\n      }\n\n      .container .cards-conformities {\n        display: grid;\n        grid-template-columns: 1fr 1fr 1fr;\n        gap: 16px;\n\n        width: 100%;\n      }\n\n      .container .history-due-diligence {\n        display: flex;\n        align-items: center;\n        gap: 8px;\n\n        color: var(--black);\n      }\n\n      .container .history-due-diligence div {\n        font-size: 16px;\n        font-weight: 400;\n        line-height: 17.44px;\n      }\n\n      .container .contents .history-information {\n        width: 100%;\n\n        display: flex;\n        flex-direction: column;\n        gap: 16px;\n      }\n\n      .container .contents .history-value-chain-item {\n        margin-top: 8px;\n\n        display: flex;\n        flex-direction: column;\n        gap: 16px;\n      }\n      .container .contents .history-value-chain {\n        display: flex;\n        flex-direction: row;\n        gap: 16px;\n      }\n      .container .contents .verified-ratio {}\n      .container .contents .history-event {}\n      .container .contents .history-item {}\n      .container .contents .view-more-button {\n        align-self: baseline;\n      }\n\n      .container .frame-18 {\n        display: flex;\n        flex-direction: column;\n        min-width: 400px;\n        align-items: flex-start;\n        flex: 1;\n        flex-grow: 1;\n      }\n\n      .container .frame-19 {\n        display: flex;\n        flex-direction: column;\n        align-items: flex-start;\n      }\n\n      .container .frame-20 {\n        display: flex;\n        flex-direction: column;\n        align-items: flex-start;\n        gap: 12px;\n        align-self: stretch;\n        width: 100%;\n      }\n\n      .container .cards-traceability-2 {\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        padding: 8px 0px;\n        align-self: stretch;\n        width: 100%;\n        border-radius: 4px;\n      }\n\n      .container .frame-21 {\n        display: inline-flex;\n        align-items: center;\n        gap: 8px;\n      }\n\n      .container .company-name {\n        align-self: stretch;\n        font-weight: 400;\n        color: var(--black);\n        font-size: 16px;\n        line-height: 17.4px;\n      }\n\n      .container .frame-22 {\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        gap: 8px;\n        align-self: stretch;\n        width: 100%;\n      }\n\n      .container .rectangle-3 {\n        align-self: stretch;\n        width: 100%;\n        height: 1px;\n        background-color: var(--primary-colorsgray-400);\n      }\n\n      .container .frame-23 {\n        display: flex;\n        align-items: flex-start;\n        gap: 8px;\n        align-self: stretch;\n        width: 100%;\n      }\n\n      .container .div-6 {\n        width: fit-content;\n        margin-top: -1px;\n        font-weight: 400;\n        color: var(--primary-colorsgray-700);\n        font-size: 14px;\n        line-height: 19.2px;\n      }\n\n      .container .text-wrapper-17 {\n        font-weight: 400;\n        color: #232e3d;\n        font-size: 14px;\n        line-height: 19.2px;\n      }\n\n      .container .text-wrapper-18 {\n        font-size: 16px;\n        font-weight: 500;\n        line-height: 17.44px;\n        color: #232E3D;\n      }\n\n      .container .black-line {\n        text-decoration: none;\n        color: #232e3d;\n        border-bottom: 1px solid;\n      }\n\n      .container .frame-24 {\n        display: none;\n        flex-direction: column;\n        align-items: flex-start;\n        gap: 12px;\n        padding: 0px 200px;\n        align-self: stretch;\n        width: 100%;\n      }\n\n      .container .frame-24:has(.data-two-columns) {\n        display: flex;\n      }\n\n      .container .heading-wrapper {\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        gap: 10px;\n        align-self: stretch;\n        width: 100%;\n      }\n\n      .container .heading {\n        flex: 1;\n        margin-top: -1px;\n        font-weight: 700;\n        color: var(--primary-colorsgray-700);\n        font-size: 40px;\n        line-height: 43.6px;\n      }\n\n      .container .cards {\n        display: grid;\n        grid-template-columns: 1fr 1fr;\n        align-items: flex-start;\n        gap: 20px 20px;\n        align-self: stretch;\n      }\n\n      .container .cards-composition {\n        display: flex;\n        min-width: 400px;\n        align-items: flex-start;\n        justify-content: space-between;\n        padding: 20px;\n        background-color: var(--white);\n        border-radius: 4px;\n        border: 1px solid;\n        border-color: var(--primary-colorsgray-400);\n      }\n\n      .container .first-column {\n        display: flex;\n        width: 260px;\n        align-items: flex-start;\n        gap: 12px;\n      }\n\n      .container .percentage {\n        width: 40px;\n        margin-top: -1px;\n        font-weight: 500;\n        color: var(--black);\n        font-size: 15px;\n        line-height: 20.6px;\n      }\n\n      .container .details {\n        display: flex;\n        flex-direction: column;\n        align-items: flex-start;\n        gap: 6px;\n        flex: 1;\n        flex-grow: 1;\n      }\n\n      .container .frame-25 {\n        display: inline-flex;\n        align-items: flex-start;\n        gap: 6px;\n      }\n\n      .container .frame-26 {\n        display: inline-flex;\n        align-items: flex-start;\n        gap: 4px;\n        padding: 2px 4px;\n        background-color: #d2e5f8;\n      }\n\n      .container .text-wrapper-19 {\n        width: fit-content;\n        margin-top: -1px;\n        font-weight: 400;\n        color: var(--black);\n        font-size: 14px;\n        text-align: right;\n        line-height: 19.2px;\n      }\n\n      .container .frame-27 {\n        display: inline-flex;\n        align-items: flex-start;\n        gap: 4px;\n        padding: 2px 4px;\n        background-color: var(--primary-colorsblue-50);\n      }\n\n      .container .data-data-link-2 {\n        display: inline-flex;\n        flex-direction: column;\n        align-items: flex-start;\n        gap: 6px;\n      }\n\n      .container .frame-28 {\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        gap: 12px;\n        align-self: stretch;\n        width: 100%;\n      }\n\n      .container .frame-29 {\n        display: flex;\n        flex-direction: column;\n        gap: 8px;\n      }\n\n      .container .type-of-event {\n        flex: 1;\n        margin-top: -1px;\n        font-weight: 400;\n        color: var(--black);\n        font-size: 16px;\n        line-height: 17.4px;\n      }\n\n      .container .text-wrapper-20 {\n        align-self: stretch;\n        font-weight: 400;\n        color: var(--primary-colorsblue-700);\n        font-size: 16px;\n        line-height: 17.4px;\n        cursor: pointer;\n      }\n\n      .container .this-digital-product-wrapper {\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        gap: 10px;\n        padding: 24px 200px 76px;\n        align-self: stretch;\n        width: 100%;\n        background-color: var(--primary-colorsblue-10);\n      }\n\n      .container .this-digital-product {\n        flex: 1;\n        margin-top: -1px;\n        font-weight: 400;\n        color: var(--primary-colorsgray-700);\n        font-size: 14px;\n        line-height: 19.2px;\n      }\n    }\n  </style>\n</head>\n\n<body>\n  <div class=\"container\">\n    <!-- Mobile width 390px-->\n    <div class=\"mobile\">\n      <header class=\"header\">\n        <div class=\"header-image\">\n          <p class=\"header-image-top-left\">PRODUCT PASSPORT</p>\n          <div class=\"header-image-bottom-left\">\n            <h1>{{credentialSubject.name}}</h1>\n          </div>\n        </div>\n\n        <div>\n          <div class=\"header-batch\">\n            <div class=\"header-batch-item\">\n              <svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                <path\n                  d=\"M2.45 3.5C2.17152 3.5 1.90445 3.38938 1.70754 3.19246C1.51062 2.99555 1.4 2.72848 1.4 2.45C1.4 2.17152 1.51062 1.90445 1.70754 1.70754C1.90445 1.51062 2.17152 1.4 2.45 1.4C2.72848 1.4 2.99555 1.51062 3.19246 1.70754C3.38938 1.90445 3.5 2.17152 3.5 2.45C3.5 2.72848 3.38938 2.99555 3.19246 3.19246C2.99555 3.38938 2.72848 3.5 2.45 3.5ZM13.587 6.706L7.287 0.406C7.035 0.154 6.685 0 6.3 0H1.4C0.623 0 0 0.623 0 1.4V6.3C0 6.685 0.154 7.035 0.413 7.287L6.706 13.587C6.965 13.839 7.315 14 7.7 14C8.085 14 8.435 13.839 8.687 13.587L13.587 8.687C13.846 8.435 14 8.085 14 7.7C14 7.308 13.839 6.958 13.587 6.706Z\"\n                  fill=\"#1F5A95\" />\n              </svg>\n              <a href=\"{{credentialSubject.idScheme.id}}\" class=\"blue-bottom-line-thick\">ID: {{credentialSubject.registeredId}}</a>\n            </div>\n            <div class=\"header-batch-item\">\n              <svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                <path\n                  d=\"M2.45 3.5C2.17152 3.5 1.90445 3.38938 1.70754 3.19246C1.51062 2.99555 1.4 2.72848 1.4 2.45C1.4 2.17152 1.51062 1.90445 1.70754 1.70754C1.90445 1.51062 2.17152 1.4 2.45 1.4C2.72848 1.4 2.99555 1.51062 3.19246 1.70754C3.38938 1.90445 3.5 2.17152 3.5 2.45C3.5 2.72848 3.38938 2.99555 3.19246 3.19246C2.99555 3.38938 2.72848 3.5 2.45 3.5ZM13.587 6.706L7.287 0.406C7.035 0.154 6.685 0 6.3 0H1.4C0.623 0 0 0.623 0 1.4V6.3C0 6.685 0.154 7.035 0.413 7.287L6.706 13.587C6.965 13.839 7.315 14 7.7 14C8.085 14 8.435 13.839 8.687 13.587L13.587 8.687C13.846 8.435 14 8.085 14 7.7C14 7.308 13.839 6.958 13.587 6.706Z\"\n                  fill=\"#1F5A95\" />\n              </svg>\n              <a>Batch: {{credentialSubject.batchNumber}}</a>\n            </div>\n            <div class=\"header-batch-item\">\n              <svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                <path\n                  d=\"M2.45 3.5C2.17152 3.5 1.90445 3.38938 1.70754 3.19246C1.51062 2.99555 1.4 2.72848 1.4 2.45C1.4 2.17152 1.51062 1.90445 1.70754 1.70754C1.90445 1.51062 2.17152 1.4 2.45 1.4C2.72848 1.4 2.99555 1.51062 3.19246 1.70754C3.38938 1.90445 3.5 2.17152 3.5 2.45C3.5 2.72848 3.38938 2.99555 3.19246 3.19246C2.99555 3.38938 2.72848 3.5 2.45 3.5ZM13.587 6.706L7.287 0.406C7.035 0.154 6.685 0 6.3 0H1.4C0.623 0 0 0.623 0 1.4V6.3C0 6.685 0.154 7.035 0.413 7.287L6.706 13.587C6.965 13.839 7.315 14 7.7 14C8.085 14 8.435 13.839 8.687 13.587L13.587 8.687C13.846 8.435 14 8.085 14 7.7C14 7.308 13.839 6.958 13.587 6.706Z\"\n                  fill=\"#1F5A95\" />\n              </svg>\n              <a>Serial: {{credentialSubject.serialNumber}}</a>\n            </div>\n          </div>\n        </div>\n      </header>\n\n      <section class=\"information\">\n        <div class=\"information-text\">\n          {{credentialSubject.description}}\n        </div>\n        <div class=\"information-show-more\">\n          {{#each credentialSubject.furtherInformation}}\n          <a href=\"{{linkURL}}\" class=\"blue-bottom-line-thick\">{{linkName}}</a>\n          {{/each}}\n        </div>\n      </section>\n\n      {{#if credentialSubject.characteristic}}\n      <section class=\"production\">\n        <div class=\"production-title\">Characteristics</div>\n        <div class=\"product-table table\">\n        {{#each credentialSubject.characteristic}}\n        <div class=\"table-item\">\n          <span class=\"item-title\">{{@key}}</span>\n          <p class=\"item-value\">{{this}}</p>\n        </div>\n        {{/each}}\n        </div>\n      </section>\n      {{/if}}\n\n      <section class=\"passport\">\n        <div class=\"passport-issued-by-header\">\n          <h3>Circularity Scorecard</h3>\n          <p>The circularity Scorecard provides a simple high level summary of circularity performance of the product.</p>\n        </div>\n\n        <div class=\"passport-box\">\n          <div class=\"passport-box-item\">\n            <h3>{{credentialSubject.circularityScorecard.recyclableContent}}%</h3>\n            <p>Recyclable content</p>\n          </div>\n          <div class=\"passport-box-item\">\n            <h3>{{credentialSubject.circularityScorecard.recycledContent}}%</h3>\n            <p>Recycled content</p>\n          </div>\n          <div class=\"passport-box-item\">\n            <h3>{{credentialSubject.circularityScorecard.utilityFactor}}</h3>\n            <p>Utility factor</p>\n          </div>\n          <div class=\"passport-box-item\">\n            <h3>{{credentialSubject.circularityScorecard.materialCircularityIndicator}}</h3>\n            <p>Material circularity*</p>\n          </div>\n        </div>\n\n        <div class=\"passport-annotation\">\n          <p>*The Material Circularity Indicator provides an overall circularity score which is a function of all three of\n            the earlier measures.</p>\n        </div>\n\n        <div class=\"traceability-cards\">\n          <a href=\"{{credentialSubject.circularityScorecard.recyclingInformation.linkURL}}\" class=\"traceability-card\">\n            <div class=\"traceability-card-text\">\n              <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                <path\n                  d=\"M21.82 15.42L19.32 19.75C18.83 20.61 17.92 21.06 17 21H15V23L12.5 18.5L15 14V16H17.82L15.6 12.15L19.93 9.65L21.73 12.77C22.25 13.54 22.32 14.57 21.82 15.42ZM9.21003 3.06H14.21C15.19 3.06 16.04 3.63 16.45 4.45L17.45 6.19L19.18 5.19L16.54 9.6L11.39 9.69L13.12 8.69L11.71 6.24L9.50003 10.09L5.16003 7.59L6.96003 4.47C7.37003 3.64 8.22003 3.06 9.21003 3.06ZM5.05003 19.76L2.55003 15.43C2.06003 14.58 2.13003 13.56 2.64003 12.79L3.64003 11.06L1.91003 10.06L7.05003 10.14L9.70003 14.56L7.97003 13.56L6.56003 16H11V21H7.40003C6.93154 21.0339 6.46293 20.9357 6.0475 20.7165C5.63206 20.4973 5.28648 20.1659 5.05003 19.76Z\"\n                  fill=\"#1F5A95\" />\n              </svg>\n              <p>Recycling instructions</p>\n            </div>\n            <div class=\"traceability-card-view-details\">\n              <svg width=\"10\" height=\"15\" viewBox=\"0 0 10 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                <path d=\"M1 1L8 8L1 15\" stroke=\"#1F5A95\" stroke-width=\"2\" stroke-linecap=\"round\"\n                  stroke-linejoin=\"round\" />\n              </svg>\n            </div>\n          </a>\n          <a href=\"{{credentialSubject.circularityScorecard.repairInformation.linkURL}}\" class=\"traceability-card\">\n            <div class=\"traceability-card-text\">\n              <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                <path\n                  d=\"M18.85 21.975C18.7167 21.975 18.5917 21.9543 18.475 21.913C18.3583 21.8717 18.25 21.8007 18.15 21.7L13.05 16.6C12.95 16.5 12.879 16.3917 12.837 16.275C12.795 16.1583 12.7743 16.0333 12.775 15.9C12.7757 15.7667 12.7967 15.6417 12.838 15.525C12.8793 15.4083 12.95 15.3 13.05 15.2L15.175 13.075C15.275 12.975 15.3833 12.9043 15.5 12.863C15.6167 12.8217 15.7417 12.8007 15.875 12.8C16.0083 12.7993 16.1333 12.8203 16.25 12.863C16.3667 12.9057 16.475 12.9763 16.575 13.075L21.675 18.175C21.775 18.275 21.846 18.3833 21.888 18.5C21.93 18.6167 21.9507 18.7417 21.95 18.875C21.9493 19.0083 21.9287 19.1333 21.888 19.25C21.8473 19.3667 21.7763 19.475 21.675 19.575L19.55 21.7C19.45 21.8 19.3417 21.871 19.225 21.913C19.1083 21.955 18.9833 21.9757 18.85 21.975ZM18.85 19.6L19.575 18.875L15.9 15.2L15.175 15.925L18.85 19.6ZM5.125 22C4.99167 22 4.86267 21.975 4.738 21.925C4.61333 21.875 4.50067 21.8 4.4 21.7L2.3 19.6C2.2 19.5 2.125 19.3873 2.075 19.262C2.025 19.1367 2 19.008 2 18.876C2 18.744 2.025 18.619 2.075 18.501C2.125 18.383 2.2 18.2747 2.3 18.176L7.6 12.876H9.725L10.575 12.026L6.45 7.9H5.025L2 4.875L4.825 2.05L7.85 5.075V6.5L11.975 10.625L14.875 7.725L13.8 6.65L15.2 5.25H12.375L11.675 4.55L15.225 1L15.925 1.7V4.525L17.325 3.125L20.875 6.675C21.1583 6.95833 21.375 7.27933 21.525 7.638C21.675 7.99667 21.75 8.37567 21.75 8.775C21.75 9.17433 21.675 9.55767 21.525 9.925C21.375 10.2923 21.1583 10.6173 20.875 10.9L18.75 8.775L17.35 10.175L16.3 9.125L11.125 14.3V16.4L5.825 21.7C5.725 21.8 5.61667 21.875 5.5 21.925C5.38333 21.975 5.25833 22 5.125 22ZM5.125 19.6L9.375 15.35V14.625H8.65L4.4 18.875L5.125 19.6ZM5.125 19.6L4.4 18.875L4.775 19.225L5.125 19.6Z\"\n                  fill=\"#1F5A95\" />\n              </svg>\n              <p>Repair instructions</p>\n            </div>\n            <div class=\"traceability-card-view-details\">\n              <svg width=\"10\" height=\"15\" viewBox=\"0 0 10 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                <path d=\"M1 1L8 8L1 15\" stroke=\"#1F5A95\" stroke-width=\"2\" stroke-linecap=\"round\"\n                  stroke-linejoin=\"round\" />\n              </svg>\n            </div>\n          </a>\n        </div>\n      </section>\n\n      <section class=\"emission-score-card\">\n        <h3 class=\"mission-score-title\">Emissions Scorecard</h3>\n        <p class=\"mission-score-description\">The Emissions Scorecard gives a clear snapshot of the product's greenhouse\n          gas (GHG) emissions performance, providing a single indicator to assess its overall environmental impact.</p>\n        <div class=\"score\">\n          <p class=\"score-unit\">\n            {{credentialSubject.emissionsScorecard.carbonFootprint}}{{credentialSubject.emissionsScorecard.declaredUnit}}\n          </p>\n          <p class=\"score-name\">Co2Eq</p>\n        </div>\n        <div class=\"table\">\n          <div class=\"table-item\">\n            <span class=\"item-title\">Scope includes</span>\n            <p class=\"item-value\">{{credentialSubject.emissionsScorecard.operationalScope}}</p>\n          </div>\n          <div class=\"table-item\">\n            <span class=\"item-title\">Primary sourced ratio*</span>\n            <p class=\"item-value\">{{credentialSubject.emissionsScorecard.primarySourcedRatio}}% primary sources</p>\n          </div>\n          <div class=\"table-item\">\n            <span class=\"item-title\">Reporting standard</span>\n            <div class=\"item-value\">\n              <a href=\"{{credentialSubject.emissionsScorecard.reportingStandard.id}}\"\n                class=\"blue-bottom-line-thick\">{{credentialSubject.emissionsScorecard.reportingStandard.name}}</a>\n            </div>\n          </div>\n          <div class=\"table-item\">\n            <span class=\"item-title\">Issue date</span>\n            <p class=\"item-value\">{{credentialSubject.emissionsScorecard.reportingStandard.issueDate}}</p>\n          </div>\n        </div>\n        <div class=\"annotation\">\n          <span>*</span>\n          <p>The Primary Sourced Ratio shows the percentage of scope 3 emissions data that is directly collected from\n            actual sources, rather than being based on estimates.</p>\n        </div>\n      </section>\n\n      <section class=\"declarations\">\n        <div class=\"declaration-title\">Declarations</div>\n        <div class=\"cards-conformities\">\n          {{#each credentialSubject.conformityClaim}}\n          <div class=\"cards-conformity\">\n            <div class=\"frame\">\n              <div class=\"div\">\n                <div class=\"company-name\">Conformance:</div>\n                <div class=\"{{#if conformance}}tags-VC-badge-green{{else}}tags-VC-badge-red{{/if}}\">\n                  <div class=\"verifiable\">{{#if conformance}}Yes{{else}}No{{/if}}</div>\n                </div>\n              </div>\n              <div class=\"company-name\">Assessed: {{assessmentDate}}</div>\n            </div>\n            <div class=\"frame-2\">\n              <div class=\"text-wrapper\">{{conformityEvidence.linkName}}</div>\n              <p class=\"p\">\n                <span class=\"span\">{{referenceRegulation.name}} administered in {{referenceRegulation.jurisdictionCountry}} by </span>\n                <a href=\"{{referenceRegulation.administeredBy.id}}\" class=\"text-wrapper-2 gray-bottom-line\">{{referenceRegulation.administeredBy.name}}</a>\n              </p>\n              <p class=\"p\">\n                <span class=\"span\">{{referenceStandard.name}} issued by </span>\n                <a href=\"{{referenceStandard.issuingParty.id}}\" class=\"text-wrapper-2 gray-bottom-line\">{{referenceStandard.issuingParty.name}}</a>\n              </p>\n            </div>\n            <div class=\"frame-3\">\n              {{#each declaredValue}}\n              <div class=\"frame-4\">\n                <div class=\"typography-heading\">\n                  <p class=\"heading\">{{metricName}} is {{metricValue.value}}{{metricValue.unit}}</p>\n                </div>\n                <div class=\"typography-heading\">\n                  <p class=\"heading-2\">Score: {{score}} | Accuracy {{accuracy}}</p>\n                </div>\n              </div>\n              {{/each}}\n            </div>\n            <a href=\"{{conformityEvidence.linkURL}}\" class=\"cards-traceability\">\n              <div class=\"frame-5\">\n                <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path\n                    d=\"M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H19C19.55 3 20.021 3.196 20.413 3.588C20.805 3.98 21.0007 4.45067 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5ZM5 5V19H19V5H17V12L14.5 10.5L12 12V5H5Z\"\n                    fill=\"#1F5A95\"></path>\n                </svg>\n                <div class=\"company-name-wrapper\">\n                  <div class=\"company-name-2\">Evidence</div>\n                </div>\n              </div>\n              <svg width=\"10\" height=\"15\" viewBox=\"0 0 10 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                <path d=\"M1 1L8 8L1 15\" stroke=\"#1F5A95\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                </path>\n              </svg>\n            </a>\n          </div>\n          {{/each}}\n        </div>\n      </section>\n\n      <section class=\"production\">\n        <div class=\"production-title\">Production</div>\n        <div class=\"product-table table\">\n          <div class=\"table-item\">\n            <span class=\"item-title\">Product category</span>\n            <p class=\"item-value\">{{#each credentialSubject.productCategory}}{{name}}{{#unless @last}},{{/unless}}\n              {{/each}}</p>\n          </div>\n          <div class=\"table-item\">\n            <span class=\"item-title\">Produced by</span>\n            <a href=\"{{credentialSubject.producedByParty.id}}\"\n              class=\"blue-bottom-line-thick\">{{credentialSubject.producedByParty.name}}</a>\n          </div>\n          <div class=\"table-item\">\n            <span class=\"item-title\">Produced at</span>\n            <div class=\"item-value\">\n              <a href=\"{{credentialSubject.producedAtFacility.id}}\"\n                class=\"blue-bottom-line-thick\">{{credentialSubject.producedAtFacility.name}}</a>\n            </div>\n          </div>\n          <div class=\"table-item\">\n            <span class=\"item-title\">Date produced</span>\n            <p class=\"item-value\">{{credentialSubject.productionDate}}</p>\n          </div>\n          <div class=\"table-item\">\n            <span class=\"item-title\">Country</span>\n            <p class=\"item-value\">{{credentialSubject.countryOfProduction}}</p>\n          </div>\n          <div class=\"table-item\">\n            <span class=\"item-title\">Dimensions</span>\n            <p class=\"item-value\">\n              <span>Weight: {{credentialSubject.dimensions.weight.value}}{{credentialSubject.dimensions.weight.unit}}</span>\n              <span>Length: {{credentialSubject.dimensions.length.value}}{{credentialSubject.dimensions.length.unit}}</span>\n              <span>Width: {{credentialSubject.dimensions.width.value}}{{credentialSubject.dimensions.width.unit}}</span>\n              <span>Height: {{credentialSubject.dimensions.height.value}}{{credentialSubject.dimensions.height.unit}}</span>\n              <span>Volume: {{credentialSubject.dimensions.volume.value}}{{credentialSubject.dimensions.volume.unit}}</span>\n            </p>\n          </div>\n        </div>\n      </section>\n\n      <section class=\"composition\">\n        <div>\n          <p class=\"section-title\">Product composition</p>\n          <p class=\"section-description\">\n            A complete list of materials that make up the composition of this product.\n          </p>\n        </div>\n\n        <div class=\"composition-box\">\n          {{#each credentialSubject.materialsProvenance}}\n          <div class=\"composition-box-item\">\n            <div class=\"composition-box-first-column\">\n              <p class=\"composition-percent\">{{massFraction}}%</p>\n              <div class=\"composition-box-second-column\">\n                <p class=\"composition-title\">{{massAmount.value}}{{massAmount.unit}} {{name}}</p>\n                <div class=\"composition-tag\">\n                  <p class=\"composition-tag-item\">Recycled {{recycledAmount}}%</p>\n                  <p class=\"composition-tag-item\">Hazard {{#if hazardous}}Yes{{else}}No{{/if}}</p>\n                </div>\n                <a href=\"{{materialSafetyInformation.linkURL}}\"\n                  class=\"blue-bottom-line-thick\">{{materialSafetyInformation.linkName}}</a>\n              </div>\n            </div>\n\n            <div class=\"composition-box-third-column\">\n              <div class=\"country-code\">{{originCountry}}</div>\n            </div>\n          </div>\n          {{/each}}\n        </div>\n      </section>\n\n      <section class=\"history\">\n        <div>\n          <p class=\"section-title\">History</p>\n        </div>\n\n        {{!-- start: Supply chain due diligence report --}}\n        <a href=\"{{credentialSubject.dueDiligenceDeclaration.linkURL}}\" class=\"cards-traceability\">\n          <div class=\"frame-5\">\n            <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n              <path\n                d=\"M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H19C19.55 3 20.021 3.196 20.413 3.588C20.805 3.98 21.0007 4.45067 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5ZM5 5V19H19V5H17V12L14.5 10.5L12 12V5H5Z\"\n                fill=\"#1F5A95\"></path>\n            </svg>\n            <div class=\"company-name-wrapper\">\n              <div class=\"company-name-2\">Supply chain due diligence report</div>\n            </div>\n          </div>\n          <svg width=\"10\" height=\"15\" viewBox=\"0 0 10 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <path d=\"M1 1L8 8L1 15\" stroke=\"#1F5A95\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n            </path>\n          </svg>\n        </a>\n        {{!-- end: Supply chain due diligence report --}}\n\n        <div class=\"history-information\">\n          <div class=\"history-value-chain-item\">\n            <div class=\"history-value-chain\">\n              <p>{{credentialSubject.traceabilityInformation.valueChainProcess}}</p>\n              <div class=\"verified-ratio\">\n                <p>Verified ratio {{credentialSubject.traceabilityInformation.verifiedRatio}}</p>\n              </div>\n            </div>\n\n            <div id=\"history-items-390px\" class=\"history-event\">\n              {{#each credentialSubject.traceabilityInformation.traceabilityEvent}}\n              <div class=\"history-item\">\n                <span>{{linkName}}</span>\n                <a href=\"{{linkURL}}\" class=\"blue-bottom-line-thick\">View</a>\n              </div>\n              {{/each}}\n            </div>\n          </div>\n        </div>\n\n      </section>\n\n      <section class=\"passport-issued-by\">\n        <div>\n          <h2 class=\"section-title\">Passport issued by</h2>\n        </div>\n        <div class=\"table\">\n          <div class=\"table-item\">\n            <span>Organisation</span>\n            <p>{{issuer.name}}</p>\n          </div>\n          <div class=\"table-item\">\n            <span>Registered ID</span>\n            <a href=\"{{issuer.id}}\" class=\"blue-bottom-line-thick\">{{issuer.id}}</a>\n          </div>\n          <div class=\"table-item\">\n            <span>Valid from</span>\n            <p>{{validFrom}}</p>\n          </div>\n          <div class=\"table-item\">\n            <span>Valid to</span>\n            <p>{{validUntil}}</p>\n          </div>\n        </div>\n      </section>\n\n      <footer>\n        <p>This Digital Product Passport (DPP) is a digital record of the product's sustainability and environmental\n          performance, ensuring transparency and accountability in line with UNTP standards. The DPP can be verified at\n          any time using the QR code or visiting <a href=\"https://www.untp-certification.org\"\n            class=\"gray-bottom-line\">www.untp-certification.org</a> with the passport ID.</p>\n      </footer>\n    </div>\n    <!-- End mobile -->\n\n    <!-- Desktop width 1440px -->\n    <div class=\"contents\">\n      <div class=\"frame\">\n        <div class=\"PP-title\">PRODUCT PASSPORT</div>\n        <div class=\"text-wrapper\">{{credentialSubject.name}}</div>\n        <div class=\"product-ID-ALT\">\n          <div class=\"div\">\n            <svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n              <path\n                d=\"M2.45 3.5C2.17152 3.5 1.90445 3.38938 1.70754 3.19246C1.51062 2.99555 1.4 2.72848 1.4 2.45C1.4 2.17152 1.51062 1.90445 1.70754 1.70754C1.90445 1.51062 2.17152 1.4 2.45 1.4C2.72848 1.4 2.99555 1.51062 3.19246 1.70754C3.38938 1.90445 3.5 2.17152 3.5 2.45C3.5 2.72848 3.38938 2.99555 3.19246 3.19246C2.99555 3.38938 2.72848 3.5 2.45 3.5ZM13.587 6.706L7.287 0.406C7.035 0.154 6.685 0 6.3 0H1.4C0.623 0 0 0.623 0 1.4V6.3C0 6.685 0.154 7.035 0.413 7.287L6.706 13.587C6.965 13.839 7.315 14 7.7 14C8.085 14 8.435 13.839 8.687 13.587L13.587 8.687C13.846 8.435 14 8.085 14 7.7C14 7.308 13.839 6.958 13.587 6.706Z\"\n                fill=\"#1F5A95\" />\n            </svg>\n            <a href=\"{{credentialSubject.id}}\" class=\"line\">\n              <div class=\"text-wrapper-2\">ID: {{credentialSubject.id}}</div>\n            </a>\n          </div>\n          <div class=\"div\">\n            <svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n              <path\n                d=\"M2.45 3.5C2.17152 3.5 1.90445 3.38938 1.70754 3.19246C1.51062 2.99555 1.4 2.72848 1.4 2.45C1.4 2.17152 1.51062 1.90445 1.70754 1.70754C1.90445 1.51062 2.17152 1.4 2.45 1.4C2.72848 1.4 2.99555 1.51062 3.19246 1.70754C3.38938 1.90445 3.5 2.17152 3.5 2.45C3.5 2.72848 3.38938 2.99555 3.19246 3.19246C2.99555 3.38938 2.72848 3.5 2.45 3.5ZM13.587 6.706L7.287 0.406C7.035 0.154 6.685 0 6.3 0H1.4C0.623 0 0 0.623 0 1.4V6.3C0 6.685 0.154 7.035 0.413 7.287L6.706 13.587C6.965 13.839 7.315 14 7.7 14C8.085 14 8.435 13.839 8.687 13.587L13.587 8.687C13.846 8.435 14 8.085 14 7.7C14 7.308 13.839 6.958 13.587 6.706Z\"\n                fill=\"#1F5A95\" />\n            </svg>\n            <div class=\"div-wrapper\">\n              <div class=\"text-wrapper-2\">Batch: {{credentialSubject.batchNumber}}</div>\n            </div>\n          </div>\n          <div class=\"div\">\n            <svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n              <path\n                d=\"M2.45 3.5C2.17152 3.5 1.90445 3.38938 1.70754 3.19246C1.51062 2.99555 1.4 2.72848 1.4 2.45C1.4 2.17152 1.51062 1.90445 1.70754 1.70754C1.90445 1.51062 2.17152 1.4 2.45 1.4C2.72848 1.4 2.99555 1.51062 3.19246 1.70754C3.38938 1.90445 3.5 2.17152 3.5 2.45C3.5 2.72848 3.38938 2.99555 3.19246 3.19246C2.99555 3.38938 2.72848 3.5 2.45 3.5ZM13.587 6.706L7.287 0.406C7.035 0.154 6.685 0 6.3 0H1.4C0.623 0 0 0.623 0 1.4V6.3C0 6.685 0.154 7.035 0.413 7.287L6.706 13.587C6.965 13.839 7.315 14 7.7 14C8.085 14 8.435 13.839 8.687 13.587L13.587 8.687C13.846 8.435 14 8.085 14 7.7C14 7.308 13.839 6.958 13.587 6.706Z\"\n                fill=\"#1F5A95\" />\n            </svg>\n            <div class=\"div-wrapper\">\n              <div class=\"text-wrapper-2\">Serial: {{credentialSubject.serialNumber}}</div>\n            </div>\n          </div>\n        </div>\n        <div class=\"frame-2\">\n          <div class=\"PP-header\">\n            <div class=\"frame-3\"></div>\n          </div>\n          <div class=\"frame-4\">\n            <p class=\"p\">\n              {{credentialSubject.description}}\n            </p>\n            {{#each credentialSubject.furtherInformation}}\n            <a href=\"{{linkURL}}\" class=\"line\">\n              <div class=\"text-wrapper-16\">{{linkName}}</div>\n            </a>\n            {{/each}}\n          </div>\n        </div>\n      </div>\n\n      {{#if credentialSubject.characteristic}}\n      <div class=\"frame-24\">\n        <div class=\"heading-wrapper\">\n          <div class=\"heading\">Characteristics</div>\n        </div>\n        <div class=\"div-5\">\n          {{#each credentialSubject.characteristic}}\n          <div class=\"data-two-columns\">\n            <div class=\"text-wrapper-12\">{{@key}}</div>\n            <div class=\"data-wrapper\">\n              <div class=\"data\">{{this}}</div>\n            </div>\n          </div>\n          {{/each}}\n        </div>\n      </div>\n      {{/if}}\n\n      <div class=\"div-2\">\n        <div class=\"typography-heading\">\n          <div class=\"text-wrapper-4\">Circularity Scorecard</div>\n        </div>\n        <p class=\"text-wrapper-5\">\n          The circularity Scorecard provides a simple high level summary of circularity\n          performance of the product.\n        </p>\n        <div class=\"div-3\">\n          <div class=\"frame-5\">\n            <div class=\"frame-6\">\n              <div class=\"frame-7\">\n                <div class=\"text-wrapper-6\">{{credentialSubject.circularityScorecard.recyclableContent}}%</div>\n                <div class=\"text-wrapper-7\">Recyclable content</div>\n              </div>\n              <div class=\"frame-7\">\n                <div class=\"text-wrapper-6\">{{credentialSubject.circularityScorecard.recycledContent}}%</div>\n                <div class=\"text-wrapper-7\">Recycled content</div>\n              </div>\n              <div class=\"frame-7\">\n                <div class=\"text-wrapper-6\">{{credentialSubject.circularityScorecard.utilityFactor}}</div>\n                <div class=\"text-wrapper-7\">Utility factor</div>\n              </div>\n              <div class=\"frame-8\">\n                <div class=\"text-wrapper-6\">{{credentialSubject.circularityScorecard.materialCircularityIndicator}}\n                </div>\n                <div class=\"text-wrapper-7\">Material circularity*</div>\n              </div>\n            </div>\n            <p class=\"text-wrapper-8\">\n              *The Material Circularity Indicator provides an overall circularity score which is a function of all three\n              of the earlier measures.\n            </p>\n          </div>\n          <div class=\"frame-9\">\n            <a href=\"{{credentialSubject.circularityScorecard.recyclingInformation.linkURL}}\"\n              class=\"cards-traceability\">\n              <div class=\"div-4\">\n                <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path\n                    d=\"M21.82 15.42L19.32 19.75C18.83 20.61 17.92 21.06 17 21H15V23L12.5 18.5L15 14V16H17.82L15.6 12.15L19.93 9.65L21.73 12.77C22.25 13.54 22.32 14.57 21.82 15.42ZM9.21003 3.06H14.21C15.19 3.06 16.04 3.63 16.45 4.45L17.45 6.19L19.18 5.19L16.54 9.6L11.39 9.69L13.12 8.69L11.71 6.24L9.50003 10.09L5.16003 7.59L6.96003 4.47C7.37003 3.64 8.22003 3.06 9.21003 3.06ZM5.05003 19.76L2.55003 15.43C2.06003 14.58 2.13003 13.56 2.64003 12.79L3.64003 11.06L1.91003 10.06L7.05003 10.14L9.70003 14.56L7.97003 13.56L6.56003 16H11V21H7.40003C6.93154 21.0339 6.46293 20.9357 6.0475 20.7165C5.63206 20.4973 5.28648 20.1659 5.05003 19.76Z\"\n                    fill=\"#1F5A95\" />\n                </svg>\n                <div class=\"frame-10\">\n                  <div class=\"text-wrapper-9\">Recycling instructions</div>\n                </div>\n              </div>\n              <div class=\"div-4\">\n                <svg width=\"10\" height=\"15\" viewBox=\"0 0 10 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path d=\"M1 1L8 8L1 15\" stroke=\"#1F5A95\" stroke-width=\"2\" stroke-linecap=\"round\"\n                    stroke-linejoin=\"round\" />\n                </svg>\n              </div>\n            </a>\n            <a href=\"{{credentialSubject.circularityScorecard.repairInformation.linkURL}}\" class=\"cards-traceability\">\n              <div class=\"div-4\">\n                <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path\n                    d=\"M18.85 21.975C18.7167 21.975 18.5917 21.9543 18.475 21.913C18.3583 21.8717 18.25 21.8007 18.15 21.7L13.05 16.6C12.95 16.5 12.879 16.3917 12.837 16.275C12.795 16.1583 12.7743 16.0333 12.775 15.9C12.7757 15.7667 12.7967 15.6417 12.838 15.525C12.8793 15.4083 12.95 15.3 13.05 15.2L15.175 13.075C15.275 12.975 15.3833 12.9043 15.5 12.863C15.6167 12.8217 15.7417 12.8007 15.875 12.8C16.0083 12.7993 16.1333 12.8203 16.25 12.863C16.3667 12.9057 16.475 12.9763 16.575 13.075L21.675 18.175C21.775 18.275 21.846 18.3833 21.888 18.5C21.93 18.6167 21.9507 18.7417 21.95 18.875C21.9493 19.0083 21.9287 19.1333 21.888 19.25C21.8473 19.3667 21.7763 19.475 21.675 19.575L19.55 21.7C19.45 21.8 19.3417 21.871 19.225 21.913C19.1083 21.955 18.9833 21.9757 18.85 21.975ZM18.85 19.6L19.575 18.875L15.9 15.2L15.175 15.925L18.85 19.6ZM5.125 22C4.99167 22 4.86267 21.975 4.738 21.925C4.61333 21.875 4.50067 21.8 4.4 21.7L2.3 19.6C2.2 19.5 2.125 19.3873 2.075 19.262C2.025 19.1367 2 19.008 2 18.876C2 18.744 2.025 18.619 2.075 18.501C2.125 18.383 2.2 18.2747 2.3 18.176L7.6 12.876H9.725L10.575 12.026L6.45 7.9H5.025L2 4.875L4.825 2.05L7.85 5.075V6.5L11.975 10.625L14.875 7.725L13.8 6.65L15.2 5.25H12.375L11.675 4.55L15.225 1L15.925 1.7V4.525L17.325 3.125L20.875 6.675C21.1583 6.95833 21.375 7.27933 21.525 7.638C21.675 7.99667 21.75 8.37567 21.75 8.775C21.75 9.17433 21.675 9.55767 21.525 9.925C21.375 10.2923 21.1583 10.6173 20.875 10.9L18.75 8.775L17.35 10.175L16.3 9.125L11.125 14.3V16.4L5.825 21.7C5.725 21.8 5.61667 21.875 5.5 21.925C5.38333 21.975 5.25833 22 5.125 22ZM5.125 19.6L9.375 15.35V14.625H8.65L4.4 18.875L5.125 19.6ZM5.125 19.6L4.4 18.875L4.775 19.225L5.125 19.6Z\"\n                    fill=\"#1F5A95\" />\n                </svg>\n                <div class=\"frame-10\">\n                  <div class=\"text-wrapper-9\">Repair instructions</div>\n                </div>\n              </div>\n              <div class=\"div-4\">\n                <svg width=\"10\" height=\"15\" viewBox=\"0 0 10 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path d=\"M1 1L8 8L1 15\" stroke=\"#1F5A95\" stroke-width=\"2\" stroke-linecap=\"round\"\n                    stroke-linejoin=\"round\" />\n                </svg>\n              </div>\n            </a>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"div-2\">\n        <div class=\"typography-heading\">\n          <div class=\"text-wrapper-4\">Emissions Scorecard</div>\n        </div>\n        <p class=\"text-wrapper-5\">\n          The Emissions Scorecard gives a clear snapshot of the product's greenhouse gas (GHG) emissions performance,\n          providing a single indicator to assess its overall environmental impact.\n        </p>\n        <div class=\"div-7\">\n          <div class=\"frame-11\">\n            <div class=\"text-wrapper-10\">\n              {{credentialSubject.emissionsScorecard.carbonFootprint}}{{credentialSubject.emissionsScorecard.declaredUnit}}\n            </div>\n            <p class=\"co-eq\">\n              <span class=\"span\">Co2Eq</span>\n            </p>\n          </div>\n          <div class=\"frame-9\">\n            <div class=\"div-3\">\n              <div class=\"frame-9\">\n                <div class=\"div-5\">\n                  <div class=\"data-two-columns-3\">\n                    <div class=\"text-wrapper-12\">Scope includes</div>\n                    <div class=\"data-data\">\n                      <div class=\"data\">{{credentialSubject.emissionsScorecard.operationalScope}}</div>\n                    </div>\n                  </div>\n                  <div class=\"data-two-columns-3\">\n                    <div class=\"text-wrapper-12\">Primary sourced ratio*</div>\n                    <div class=\"data-data\">\n                      <div class=\"data-2\">{{credentialSubject.emissionsScorecard.primarySourcedRatio}}% primary sources\n                      </div>\n                    </div>\n                  </div>\n                </div>\n                <p class=\"text-wrapper-8\">\n                  The Primary Sourced Ratio shows the percentage of scope 3 emissions data that is\n                  directly collected from actual sources, rather than being based on estimates.\n                </p>\n              </div>\n              <div class=\"frame-12\">\n                <div class=\"data-two-columns-3\">\n                  <div class=\"text-wrapper-12\">Reporting standard</div>\n                  <a href=\"{{credentialSubject.emissionsScorecard.reportingStandard.id}}\" class=\"line\">\n                    <div class=\"text-wrapper-2\">{{credentialSubject.emissionsScorecard.reportingStandard.name}}</div>\n                  </a>\n                </div>\n                <div class=\"data-two-columns-3\">\n                  <div class=\"text-wrapper-12\">Issue date</div>\n                  <div class=\"data-data\">\n                    <div class=\"data\">{{credentialSubject.emissionsScorecard.reportingStandard.issueDate}}</div>\n                  </div>\n                </div>\n              </div>\n            </div>\n            <div class=\"frame-13\">\n              <div class=\"text-wrapper-13\">*</div>\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <section class=\"div-2\">\n        <div class=\"text-wrapper-14\">Declarations</div>\n        <div class=\"cards-conformities\">\n          {{#each credentialSubject.conformityClaim}}\n          <div class=\"cards-conformity\">\n            <div class=\"cards-conformity-header\">\n              <div class=\"cards-conformity-conformance\">\n                <div class=\"conformance\">Conformance:</div>\n                <div class=\"{{#if conformance}}tags-VC-badge-green{{else}}tags-VC-badge-red{{/if}}\">\n                  <div class=\"verifiable\">{{#if conformance}}Yes{{else}}No{{/if}}</div>\n                </div>\n              </div>\n              <div class=\"conformance\">Assessed: {{assessmentDate}}</div>\n            </div>\n            <div class=\"cards-conformity-body\">\n              <div class=\"cards-conformity-title\">{{conformityEvidence.linkName}}</div>\n              <p class=\"cards-conformity-description\">\n                <span>{{referenceRegulation.name}} administered in {{referenceRegulation.jurisdictionCountry}} by </span>\n                <a href=\"{{referenceRegulation.administeredBy.id}}\" class=\"gray-bottom-line\">{{referenceRegulation.administeredBy.name}}</a>\n              </p>\n              <p class=\"cards-conformity-description\">\n                <span>{{referenceStandard.name}} issued by </span>\n                <a href=\"{{referenceStandard.issuingParty.id}}\" class=\"gray-bottom-line\">{{referenceStandard.issuingParty.name}}</a>\n              </p>\n            </div>\n            <div class=\"declared-values\">\n              {{#each declaredValue}}\n              <div class=\"declared-value\">\n                <h3>{{metricName}} is {{metricValue.value}}{{metricValue.unit}}</h3>\n                <p class=\"heading-2\">Score: {{score}} | Accuracy {{accuracy}}</p>\n              </div>\n              {{/each}}\n            </div>\n            <a href=\"{{conformityEvidence.linkURL}}\" class=\"cards-traceability-2\">\n              <div class=\"frame-21\">\n                <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path\n                    d=\"M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H19C19.55 3 20.021 3.196 20.413 3.588C20.805 3.98 21.0007 4.45067 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5ZM5 5V19H19V5H17V12L14.5 10.5L12 12V5H5Z\"\n                    fill=\"#1F5A95\"></path>\n                </svg>\n                <div class=\"company-name-wrapper\">\n                  <div class=\"company-name-2\">Evidence</div>\n                </div>\n              </div>\n              <div class=\"div-4\">\n                <svg width=\"10\" height=\"15\" viewBox=\"0 0 10 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path d=\"M1 1L8 8L1 15\" stroke=\"#1F5A95\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                  </path>\n                </svg>\n              </div>\n            </a>\n          </div>\n          {{/each}}\n        </div>\n      </section>\n\n      <div class=\"div-2\">\n        <div class=\"typography-heading\">\n          <div class=\"text-wrapper-4\">Production</div>\n        </div>\n        <div class=\"div-5\">\n          <div class=\"data-two-columns\">\n            <div class=\"text-wrapper-12\">Product category</div>\n            <div class=\"data-data\">\n              <div class=\"data-2\">{{#each credentialSubject.productCategory}}{{name}}{{#unless @last}},{{/unless}}\n                {{/each}}</div>\n            </div>\n          </div>\n          <div class=\"data-two-columns\">\n            <div class=\"text-wrapper-12\">Produced by</div>\n            <div class=\"data-data-link\">\n              <a href=\"{{credentialSubject.producedByParty.id}}\" class=\"line\">\n                <p class=\"text-wrapper-2\">{{credentialSubject.producedByParty.name}}</p>\n              </a>\n            </div>\n          </div>\n          <div class=\"data-two-columns\">\n            <div class=\"text-wrapper-12\">Produced at</div>\n            <div class=\"data-data-link\">\n              <a href=\"{{credentialSubject.producedAtFacility.id}}\" class=\"line\">\n                <p class=\"text-wrapper-2\">{{credentialSubject.producedAtFacility.name}}</p>\n              </a>\n            </div>\n          </div>\n          <div class=\"data-two-columns\">\n            <div class=\"text-wrapper-12\">Date produced</div>\n            <div class=\"data-wrapper\">\n              <div class=\"data\">{{credentialSubject.productionDate}}</div>\n            </div>\n          </div>\n          <div class=\"data-two-columns\">\n            <div class=\"text-wrapper-12\">Country</div>\n            <div class=\"data-data\">\n              <div class=\"data\">{{credentialSubject.countryOfProduction}}</div>\n            </div>\n          </div>\n          <div class=\"data-two-columns\">\n            <div class=\"text-wrapper-12\">Dimensions</div>\n            <div class=\"list\">\n              <span>Weight: {{credentialSubject.dimensions.weight.value}}{{credentialSubject.dimensions.weight.unit}}</span>\n              <span>Length: {{credentialSubject.dimensions.length.value}}{{credentialSubject.dimensions.length.unit}}</span>\n              <span>Width: {{credentialSubject.dimensions.width.value}}{{credentialSubject.dimensions.width.unit}}</span>\n              <span>Height: {{credentialSubject.dimensions.height.value}}{{credentialSubject.dimensions.height.unit}}</span>\n              <span>Volume: {{credentialSubject.dimensions.volume.value}}{{credentialSubject.dimensions.volume.unit}}</span>\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"div-2\">\n        <div class=\"typography-heading\">\n          <div class=\"text-wrapper-4\">Composition</div>\n        </div>\n        <p class=\"text-wrapper-5\">\n          The Product Composition List details the materials and components used in the product,\n          providing transparency on the origin and nature of each element.\n        </p>\n        <div class=\"cards\">\n          {{#each credentialSubject.materialsProvenance}}\n          <div class=\"cards-composition\">\n            <div class=\"first-column\">\n              <div class=\"percentage\">{{massFraction}}%</div>\n              <div class=\"details\">\n                <div class=\"text-wrapper-9\">{{massAmount.value}}{{massAmount.unit}} {{name}}</div>\n                <div class=\"frame-25\">\n                  <div class=\"frame-26\">\n                    <div class=\"text-wrapper-19\">Recycled {{#if recycledAmount}}{{recycledAmount}}{{else}}0{{/if}}%</div>\n                  </div>\n                  <div class=\"frame-27\">\n                    <div class=\"text-wrapper-19\">Hazard {{#if hazardous}}Yes{{else}}No{{/if}}</div>\n                  </div>\n                </div>\n                <div class=\"data-data-link-2\">\n                  <a href=\"{{materialSafetyInformation.linkURL}}\" class=\"line\">\n                    <div class=\"text-wrapper-2\">{{materialSafetyInformation.linkName}}</div>\n                  </a>\n                </div>\n              </div>\n            </div>\n            <div class=\"div-4\">\n              <div class=\"text-wrapper-19\">{{originCountry}}</div>\n            </div>\n          </div>\n          {{/each}}\n        </div>\n      </div>\n\n      <div class=\"div-2\">\n        <div class=\"typography-heading\">\n          <div class=\"text-wrapper-4\">History</div>\n        </div>\n\n        {{!-- start: Supply chain due diligence report --}}\n        <a href=\"{{credentialSubject.dueDiligenceDeclaration.linkURL}}\" class=\"cards-traceability\">\n          <div class=\"history-due-diligence\">\n            <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n              <path\n                d=\"M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H19C19.55 3 20.021 3.196 20.413 3.588C20.805 3.98 21.0007 4.45067 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5ZM5 5V19H19V5H17V12L14.5 10.5L12 12V5H5Z\"\n                fill=\"#1F5A95\"></path>\n            </svg>\n            <div>Supply chain due diligence report</div>\n          </div>\n          <svg width=\"10\" height=\"15\" viewBox=\"0 0 10 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <path d=\"M1 1L8 8L1 15\" stroke=\"#1F5A95\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n            </path>\n          </svg>\n        </a>\n        {{!-- end: Supply chain due diligence report --}}\n\n        <div class=\"history-information\">\n          <div class=\"history-value-chain-item\">\n            <div class=\"history-value-chain\">\n              <p>{{credentialSubject.traceabilityInformation.valueChainProcess}}</p>\n              <div class=\"verified-ratio\">\n                <p>Verified ratio {{credentialSubject.traceabilityInformation.verifiedRatio}}</p>\n              </div>\n            </div>\n\n            <div id=\"history-items-1440px\" class=\"history-event\">\n              {{#each credentialSubject.traceabilityInformation.traceabilityEvent}}\n              <div class=\"history-item\">\n                <span>{{linkName}}</span>\n                <a href=\"{{linkURL}}\" class=\"blue-bottom-line-thick\">View</a>\n              </div>\n              {{/each}}\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"div-2\">\n        <div class=\"text-wrapper-4\">Passport issued by</div>\n        <div class=\"div-5\">\n          <div class=\"data-two-columns\">\n            <div class=\"text-wrapper-12\">Organisation</div>\n            <div class=\"data-data\">\n              <div class=\"data\">{{issuer.name}}</div>\n            </div>\n          </div>\n          <div class=\"data-two-columns\">\n            <div class=\"text-wrapper-12\">Registered ID</div>\n            <div class=\"data-data-link\">\n              <a href=\"{{issuer.id}}\" class=\"line\">\n                <div class=\"text-wrapper-2\">{{issuer.id}}</div>\n              </a>\n            </div>\n          </div>\n          <div class=\"data-two-columns\">\n            <div class=\"text-wrapper-12\">Valid from</div>\n            <div class=\"data-data\">\n              <div class=\"data\">{{validFrom}}</div>\n            </div>\n          </div>\n          <div class=\"data-two-columns\">\n            <div class=\"text-wrapper-12\">Valid to</div>\n            <div class=\"data-data\">\n              <div class=\"data\">{{validUntil}}</div>\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"this-digital-product-wrapper\">\n        <p class=\"this-digital-product\">\n          <span class=\"text-wrapper-17\">This Digital Product Passport (DPP) is a digital record of the product’s\n            sustainability and environmental performance, ensuring transparency and accountability\n            in line with UNTP standards. The DPP can be verified at any time using the QR code or\n            visiting\n          </span>\n          <a href=\"https://www.untp-certification.org\" class=\"black-line\" target=\"_blank\"\n            rel=\"noopener noreferrer\"><span>www.untp-certification.org</span></a>\n          <span class=\"text-wrapper-17\"> with the passport ID.</span>\n        </p>\n      </div>\n    </div>\n    <!-- End desktop -->\n  </div>\n</body>\n\n</html>\n",
+                        "@type": "RenderTemplate2024"
+                      }
+                    ],
+                    "type": [
+                      "DigitalProductPassport"
+                    ],
+                    "dlrLinkTitle": "Product Passport",
+                    "dlrIdentificationKeyType": "gtin",
+                    "dlrVerificationPage": "http://localhost:3003/verify"
+                  },
+                  "dlr": {
+                    "dlrAPIUrl": "http://localhost:3000",
+                    "dlrAPIKey": "test123",
+                    "namespace": "gs1",
+                    "linkRegisterPath": "/api/resolver"
+                  },
+                  "storage": {
+                    "url": "http://localhost:3334/v1/documents",
+                    "params": {
+                      "resultPath": "/uri",
+                      "bucket": "verifiable-credentials"
+                    },
+                    "options": {
+                      "method": "POST",
+                      "headers": {
+                        "Content-Type": "application/json"
+                      }
+                    }
+                  },
+                  "identifierKeyPath": "/id"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "id": "qCeigb7Mqqw784R711XCp",
+      "services": [],
+      "components": []
     }
   ],
   "apps": [
     {
-      "name": "Battery Facility",
+      "name": "Cotton Farm",
       "type": "producer",
       "assets": {
-        "logo": "Cherries-farm-logo.webp",
-        "brandTitle": "Battery Facility"
+        "logo": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-sehRgvPbOeC328bfvtxJQxOk/user-kZ29ZvYUGEKeKmwZSzShXtxE/img-pmZXtNERpcio5GRUDjd2xpjL.png?st=2024-11-07T23%3A35%3A12Z&se=2024-11-08T01%3A35%3A12Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-11-07T20%3A15%3A47Z&ske=2024-11-08T20%3A15%3A47Z&sks=b&skv=2024-08-04&sig=Hns7qOK2Dc7Jj1uYmm8iMqo/zCOHTcrkZFxKbJlPzLY%3D",
+        "brandTitle": "Bobs farm"
       },
       "styles": {
-        "primaryColor": "#b5651d",
-        "secondaryColor": "#391561",
-        "tertiaryColor": "#ffffff"
+        "primaryColor": "#2164b0",
+        "secondaryColor": "#F5F7FA",
+        "tertiaryColor": "#333333"
       },
       "features": [
         {
           "name": "Issue DPP",
-          "id": "produce_product",
+          "id": "fLezHn7zYOTs0ZrtOn-wN",
           "components": [
             {
               "name": "JsonForm",
@@ -46,7 +123,7 @@
                   "type": [
                     "Product"
                   ],
-                  "id": "https://example.com/01/09359502000034",
+                  "id": "https://example.com/01/0935950200003",
                   "name": "EcoCharge Lithium-Ion Battery",
                   "registeredId": "095201234",
                   "idScheme": {
@@ -881,12 +958,19 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "G-yAqt_oDv6elhoEEXGWU"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {
+                "label": "",
+                "description": "dddd",
+                "includeDownload": true,
+                "downloadFileName": ""
+              },
+              "id": "OVQRV0IEBwUIzNZhIFls2"
             }
           ],
           "services": [
@@ -942,7 +1026,8 @@
                   },
                   "identifierKeyPath": "/id"
                 }
-              ]
+              ],
+              "id": "G7f5x3fx3XMsE3E2leLyd"
             },
             {
               "name": "mergeToLocalStorage",
@@ -951,13 +1036,14 @@
                   "storageKey": "CherriesFarm_dpps",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
                 }
-              ]
+              ],
+              "id": "plD7Cs8lvyaV5w-DMNife"
             }
           ]
         },
         {
           "name": "Move to Next Facility",
-          "id": "transaction_product",
+          "id": "YYVPePH3JqTeMNKT52CJs",
           "components": [
             {
               "name": "LocalStorageLoader",
@@ -1102,7 +1188,8 @@
                     }
                   }
                 ]
-              }
+              },
+              "id": "WIPtLSu_kzsQWBk5EwzEN"
             },
             {
               "name": "CustomButton",
@@ -1110,7 +1197,8 @@
               "props": {
                 "includeDownload": true,
                 "downloadFileName": "transaction"
-              }
+              },
+              "id": "An60l_yZbzO5E1cKCupG6"
             }
           ],
           "services": [
@@ -1120,7 +1208,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "Bi2mOhjeZQpzqfT8UQMse"
             },
             {
               "name": "processTransactionEvent",
@@ -1178,7 +1267,8 @@
                     "keyPath": "/0/epcList/index/name"
                   }
                 }
-              ]
+              ],
+              "id": "jAYASvoSPoRCDq1PSRHit"
             },
             {
               "name": "mergeToLocalStorage",
@@ -1187,13 +1277,14 @@
                   "storageKey": "orchard_facility_transaction_event",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
-              ]
+              ],
+              "id": "WIxU__lp6qoKFVvlG5FAx"
             }
           ]
         },
         {
           "name": "Issue traceability Event",
-          "id": "issue_traceability_event",
+          "id": "QteP4H_uKuei6-BAt-tWz",
           "components": [
             {
               "name": "JsonForm",
@@ -2204,12 +2295,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "Y2mRe50rQBQ9bp0knmFxA"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "GwNGBF2CRIkfIFC2jrRxQ"
             }
           ],
           "services": [
@@ -2266,13 +2359,14 @@
                   "identifierKeyPath": "/0/id",
                   "eventTypePath": "/0/type/0"
                 }
-              ]
+              ],
+              "id": "sj6WMMCL98rROXVI7Cj5_"
             }
           ]
         },
         {
           "name": "Issue Object Event",
-          "id": "issue_object_event",
+          "id": "YsMS34nxS8Pq1p5r74CSp",
           "components": [
             {
               "name": "JsonForm",
@@ -2396,12 +2490,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "sj3fI2s0IL9lCDUtqFWIc"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "RFwlDKfxeQdmseqVSJDhF"
             }
           ],
           "services": [
@@ -2411,7 +2507,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "rxUCrkj2v83trmfomWhg9"
             },
             {
               "name": "processObjectEvent",
@@ -2465,13 +2562,14 @@
                   },
                   "identifierKeyPath": "/0/id"
                 }
-              ]
+              ],
+              "id": "DGZsT8ZxXAx3HU0uxWa2l"
             }
           ]
         },
         {
           "name": "Issue Association Event",
-          "id": "issue_association_event",
+          "id": "VX02FKqWPJ6jy4jBuZUiD",
           "components": [
             {
               "name": "JsonForm",
@@ -2602,12 +2700,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "sQMuZTQ7dnbS5iiRpN7W8"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "bSSm9Kc4oFKjz6BeUu2Dk"
             }
           ],
           "services": [
@@ -2617,7 +2717,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "zE8iSRs8aZ_Iw6-9bLXw3"
             },
             {
               "name": "processAssociationEvent",
@@ -2671,13 +2772,14 @@
                   },
                   "identifierKeyPath": "/0/id"
                 }
-              ]
+              ],
+              "id": "AIYFy1k4y6ujTFceKJeNB"
             }
           ]
         },
         {
           "name": "Issue Aggregation Event",
-          "id": "issue_aggregation_event",
+          "id": "r02A9Sjp-CjhENPJYnpFP",
           "components": [
             {
               "name": "JsonForm",
@@ -2808,12 +2910,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "ujtPRdqP4665aaKDL_OKl"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "IQa1Zu6H85rFBqrfwvqnP"
             }
           ],
           "services": [
@@ -2823,7 +2927,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "jiY7nx1eNgLfnifrP-018"
             },
             {
               "name": "processAggregationEvent",
@@ -2877,13 +2982,14 @@
                   },
                   "identifierKeyPath": "/0/id"
                 }
-              ]
+              ],
+              "id": "dKzuPgECT0dfjXaUpTVUn"
             }
           ]
         },
         {
           "name": "Issue Transformation Event",
-          "id": "issue_transformation_event",
+          "id": "q5q_kO6NSTIANEbhHe904",
           "components": [
             {
               "name": "JsonForm",
@@ -3037,12 +3143,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "Kypi9P1IAQjMjm23Jo0H7"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "1ZzxhD3LATuUcwpcwk8lm"
             }
           ],
           "services": [
@@ -3052,7 +3160,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "HU8LAjgVCkuwJLn0YzBB4"
             },
             {
               "name": "processTransformationEventOnly",
@@ -3106,13 +3215,14 @@
                   },
                   "identifierKeyPath": "/0/id"
                 }
-              ]
+              ],
+              "id": "-WjLh0wvMX7pLE72wLcWB"
             }
           ]
         },
         {
           "name": "Issue DCC",
-          "id": "produce_product",
+          "id": "FCnmpmttjg2YcQr-xDd9E",
           "components": [
             {
               "name": "JsonForm",
@@ -3716,12 +3826,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "t7r4RDa_J2eh5fLpRyD7y"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "VfMUWJzoexm7GF8gB1ad5"
             }
           ],
           "services": [
@@ -3777,13 +3889,14 @@
                   },
                   "identifierKeyPath": "/id"
                 }
-              ]
+              ],
+              "id": "0OEY7mfUJQRynn3m8bTSh"
             }
           ]
         },
         {
           "name": "Issue DFR",
-          "id": "produce_product",
+          "id": "FqV80N6oFTbXGZqunlp4y",
           "components": [
             {
               "name": "JsonForm",
@@ -4206,12 +4319,14 @@
                   "paddingTop": "40px",
                   "width": "80%"
                 }
-              }
+              },
+              "id": "Gfc20QG8OY1iF-FGeP6Jc"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "zIqTGRObHT1wba1U_-UZP"
             }
           ],
           "services": [
@@ -4267,11 +4382,13 @@
                   },
                   "identifierKeyPath": "/id"
                 }
-              ]
+              ],
+              "id": "jGGFo76lcjM9rn09lnjHi"
             }
           ]
         }
-      ]
+      ],
+      "id": "-u1GMy-3c_I1Ec-aYBYEN"
     },
     {
       "name": "Packhouse Facility",
@@ -4288,7 +4405,7 @@
       "features": [
         {
           "name": "Issue DPP",
-          "id": "produce_product",
+          "id": "E3267DK-cBl3NhuaYIcTd",
           "components": [
             {
               "name": "LocalStorageLoader",
@@ -5110,12 +5227,14 @@
                     }
                   }
                 ]
-              }
+              },
+              "id": "97xcGVye6TM-lcX4DKLd9"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "_VWUYMNfaKX4cRHoPfYt0"
             }
           ],
           "services": [
@@ -5171,7 +5290,8 @@
                   },
                   "identifierKeyPath": "/id"
                 }
-              ]
+              ],
+              "id": "Ic296pIJ1w_w7Uj5TVDtM"
             },
             {
               "name": "mergeToLocalStorage",
@@ -5180,13 +5300,14 @@
                   "storageKey": "CherriesFarm_dpps",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
                 }
-              ]
+              ],
+              "id": "Kwahd2YriQqCktFeXKPIF"
             }
           ]
         },
         {
           "name": "Move to Next Facility",
-          "id": "transaction_product",
+          "id": "zExKhvWKTsQrhBoFK_LxT",
           "components": [
             {
               "name": "LocalStorageLoader",
@@ -5331,7 +5452,8 @@
                     }
                   }
                 ]
-              }
+              },
+              "id": "oSk1YV8nfacGQLq8A6we4"
             },
             {
               "name": "CustomButton",
@@ -5339,7 +5461,8 @@
               "props": {
                 "includeDownload": true,
                 "downloadFileName": "transaction"
-              }
+              },
+              "id": "6QMTNht1b9J4uIV2-U2rf"
             }
           ],
           "services": [
@@ -5349,7 +5472,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "HIQn488O8C-ZZhToPBaVX"
             },
             {
               "name": "processTransactionEvent",
@@ -5407,7 +5531,8 @@
                     "keyPath": "/0/epcList/index/name"
                   }
                 }
-              ]
+              ],
+              "id": "7g3i6w1lea2o-RJHbM1mL"
             },
             {
               "name": "mergeToLocalStorage",
@@ -5416,11 +5541,13 @@
                   "storageKey": "orchard_facility_transaction_event",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
-              ]
+              ],
+              "id": "NOwPx6QX-kP5il9-A1bd6"
             }
           ]
         }
-      ]
+      ],
+      "id": "p89isu6igD_gmtyfH_Lve"
     },
     {
       "name": "Fumigation and Freight Forwarding Facility",
@@ -5437,7 +5564,7 @@
       "features": [
         {
           "name": "Issue DPP",
-          "id": "produce_product",
+          "id": "kbxWG4lPDhSJUe8MiFDxo",
           "components": [
             {
               "name": "LocalStorageLoader",
@@ -6259,12 +6386,14 @@
                     }
                   }
                 ]
-              }
+              },
+              "id": "PVDyiOpnw2bM5LY-AR1af"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "3ut7db8QJjftf5_2RVl1p"
             }
           ],
           "services": [
@@ -6320,7 +6449,8 @@
                   },
                   "identifierKeyPath": "/id"
                 }
-              ]
+              ],
+              "id": "NKOesTZsBaLJx5yawFNww"
             },
             {
               "name": "mergeToLocalStorage",
@@ -6329,13 +6459,14 @@
                   "storageKey": "CherriesFarm_dpps",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
                 }
-              ]
+              ],
+              "id": "lZjSJNYHQzuBy8eLpV7IY"
             }
           ]
         },
         {
           "name": "Move to Next Facility",
-          "id": "transaction_product",
+          "id": "WqzAEdWDtWKRH-2KIklBe",
           "components": [
             {
               "name": "LocalStorageLoader",
@@ -6480,7 +6611,8 @@
                     }
                   }
                 ]
-              }
+              },
+              "id": "NydT22bDPiIf6hdCrs7Cr"
             },
             {
               "name": "CustomButton",
@@ -6488,7 +6620,8 @@
               "props": {
                 "includeDownload": true,
                 "downloadFileName": "transaction"
-              }
+              },
+              "id": "7rFeVmRkRBQVwaDcS5Tbr"
             }
           ],
           "services": [
@@ -6498,7 +6631,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "RCymxShj2VMRf7XsNEEqm"
             },
             {
               "name": "processTransactionEvent",
@@ -6556,7 +6690,8 @@
                     "keyPath": "/0/epcList/index/name"
                   }
                 }
-              ]
+              ],
+              "id": "79L5MtvSfLSzLsOOnfLus"
             },
             {
               "name": "mergeToLocalStorage",
@@ -6565,11 +6700,13 @@
                   "storageKey": "orchard_facility_transaction_event",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
-              ]
+              ],
+              "id": "eoFm9sqXvJmZw6W3tJuno"
             }
           ]
         }
-      ]
+      ],
+      "id": "M5uYCaIt8skgSKo0ylPTy"
     },
     {
       "name": "Airport Terminal Facility",
@@ -6586,7 +6723,7 @@
       "features": [
         {
           "name": "Issue DPP",
-          "id": "produce_product",
+          "id": "YKWIof0LJJIxETHJeTCwz",
           "components": [
             {
               "name": "LocalStorageLoader",
@@ -7408,12 +7545,14 @@
                     }
                   }
                 ]
-              }
+              },
+              "id": "pVA-fYCIkElgZkLKebWaQ"
             },
             {
               "name": "CustomButton",
               "type": "Submit",
-              "props": {}
+              "props": {},
+              "id": "kNi9gAvjLoirQkCADaS1i"
             }
           ],
           "services": [
@@ -7469,7 +7608,8 @@
                   },
                   "identifierKeyPath": "/id"
                 }
-              ]
+              ],
+              "id": "t7EyonUnESt0h5WDFkisz"
             },
             {
               "name": "mergeToLocalStorage",
@@ -7478,13 +7618,14 @@
                   "storageKey": "CherriesFarm_dpps",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
                 }
-              ]
+              ],
+              "id": "hohn9qRIUP7vtBBNljT73"
             }
           ]
         },
         {
           "name": "Move to Next Facility",
-          "id": "transaction_product",
+          "id": "mzAKfw3B9nEqm7U5jIX52",
           "components": [
             {
               "name": "LocalStorageLoader",
@@ -7629,7 +7770,8 @@
                     }
                   }
                 ]
-              }
+              },
+              "id": "T-vtdUikeZj7yBm_Z1k3t"
             },
             {
               "name": "CustomButton",
@@ -7637,7 +7779,8 @@
               "props": {
                 "includeDownload": true,
                 "downloadFileName": "transaction"
-              }
+              },
+              "id": "UJ8ItGNrnGQyRvxr3ziPG"
             }
           ],
           "services": [
@@ -7647,7 +7790,8 @@
                 {
                   "path": "/data"
                 }
-              ]
+              ],
+              "id": "f-11MsNBkllWtV0R47doU"
             },
             {
               "name": "processTransactionEvent",
@@ -7705,7 +7849,8 @@
                     "keyPath": "/0/epcList/index/name"
                   }
                 }
-              ]
+              ],
+              "id": "MojrjdVPG7IDMBDkLnF50"
             },
             {
               "name": "mergeToLocalStorage",
@@ -7714,11 +7859,13 @@
                   "storageKey": "orchard_facility_transaction_event",
                   "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
-              ]
+              ],
+              "id": "1zZvXcqKmZ-x-wF2Ywlen"
             }
           ]
         }
-      ]
+      ],
+      "id": "XTCBS9j5Gidco5Knp_Ngb"
     }
   ],
   "identifyProvider": {
