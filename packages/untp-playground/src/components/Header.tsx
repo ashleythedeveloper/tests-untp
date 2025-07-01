@@ -12,7 +12,7 @@ export function Header() {
           width={62}
           height={62}
         /> */}
-        <h1 className='text-2xl font-bold'>UNTP Playground Test 1</h1>
+        <h1 className='text-2xl font-bold'>UNTP Playground Test 2</h1>
         <p className='text-sm text-muted-foreground'>v{testSuiteVersion}</p>
       </div>
     </header>
